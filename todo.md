@@ -3,9 +3,8 @@
 - [x] 2  professional images of Apostle
 - [x] A scripture, 2 set related to ministry and the word of God
 - [x] Nations reached, Global Impact ststistics in a form of banner
-- [] About Pastor as well as mandate
+- [x] About Pastor as well as mandate
 - [] List of message section
-- [] Events
 - [] News Letter
 - [] Footer
 

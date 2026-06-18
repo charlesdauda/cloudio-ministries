@@ -3,7 +3,7 @@ import pastorImage from "../assets/Images/apsabout.png";
 const credentials = [
   {
     label: "Ministry",
-    value: "25+ Years in Full-Time Ministry",
+    value: "17 Years in Full-Time Ministry",
     icon: (
       <svg viewBox="0 0 24 24" fill="none" stroke="#C8962B" strokeWidth="1.8" className="w-4 h-4" aria-hidden="true">
         <circle cx="12" cy="12" r="9" />
@@ -71,7 +71,7 @@ const About = () => {
 
               {/* 25+ years badge */}
               <div className="absolute bottom-0 right-0 bg-[#C8962B] text-[#FBF9F5] px-6 py-5 text-center min-w-25">
-                <span className="block font-serif text-[40px] font-bold leading-none tracking-tight">25+</span>
+                <span className="block font-serif text-[40px] font-bold leading-none tracking-tight">17</span>
                 <span className="block text-[10px] font-semibold uppercase tracking-widest mt-1 opacity-90 leading-tight">
                   Years of<br />Ministry
                 </span>
@@ -81,12 +81,12 @@ const About = () => {
             {/* Floating stat card — desktop only */}
             <div className="hidden lg:flex absolute -bottom-6 -left-6 z-20 bg-white border border-[#e0d9ce] px-5 py-4 items-center gap-4">
               <div>
-                <p className="font-serif text-[34px] font-bold text-[#C8962B] leading-none">40+</p>
+                <p className="font-serif text-[34px] font-bold text-[#C8962B] leading-none">10</p>
                 <p className="text-[11px] uppercase tracking-widest text-slate-500 font-semibold mt-1">Countries Reached</p>
               </div>
               <div className="w-px h-10 bg-[#e0d9ce]" />
               <div>
-                <p className="font-serif text-[34px] font-bold text-[#C8962B] leading-none">1M+</p>
+                <p className="font-serif text-[34px] font-bold text-[#C8962B] leading-none">1K+</p>
                 <p className="text-[11px] uppercase tracking-widest text-slate-500 font-semibold mt-1">Lives Impacted</p>
               </div>
             </div>
