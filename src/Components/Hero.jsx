@@ -157,9 +157,9 @@ const Hero = () => {
 
         {/* Stats row — tablet + desktop */}
         <div className="mt-8 hidden max-w-3xl flex-wrap items-center gap-x-6 gap-y-5 border-t border-slate-200/70 pt-6 sm:flex lg:mt-12 lg:gap-x-8 lg:gap-y-6 lg:pt-7">
-          <Stat icon={<Globe size={22} strokeWidth={1.5} />} value="40+" label="Countries Reached" />
+          <Stat icon={<Globe size={22} strokeWidth={1.5} />} value="10+" label="Countries Reached" />
           <Divider />
-          <Stat icon={<Users size={22} strokeWidth={1.5} />} value="1M+" label="Lives Impacted" />
+          <Stat icon={<Users size={22} strokeWidth={1.5} />} value="1K+" label="Lives Impacted" />
           <Divider />
           <Stat icon={<Trophy size={22} strokeWidth={1.5} />} value="25+" label="Years of Ministry" />
           <Divider />

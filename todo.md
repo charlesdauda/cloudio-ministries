@@ -1,9 +1,8 @@
 ## HOME PAGE
-- [] A brief introduction, 2 sets with usestates
-- [] 2  professional images of Apostle
-- [] Faint globe image behind the hero section, 2 sets
-- [] A scripture, 2 set related to ministry and the word of God
-- [] Nations reached, Global Impact ststistics in a form of banner
+- [x] A brief introduction, 2 sets with usestates
+- [x] 2  professional images of Apostle
+- [x] A scripture, 2 set related to ministry and the word of God
+- [x] Nations reached, Global Impact ststistics in a form of banner
 - [] About Pastor as well as mandate
 - [] List of message section
 - [] Events

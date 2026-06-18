@@ -1,15 +1,12 @@
 import React from 'react';
-import Navbar from './Components/Navbar';
-import Hero from './Components/Hero';
+import Home from './Pages/HomePage';
 
 const App = () => {
     return (
         <section>
-            <Navbar />
-            <Hero />
+            <Home />
         </section>
     )
 }
-
 
 export default App;
