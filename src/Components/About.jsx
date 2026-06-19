@@ -3,7 +3,7 @@ import pastorImage from "../assets/Images/apsabout.png";
 const credentials = [
   {
     label: "Ministry",
-    value: "17 Years in Full-Time Ministry",
+    value: "21 Years in Full-Time Ministry",
     icon: (
       <svg viewBox="0 0 24 24" fill="none" stroke="#C8962B" strokeWidth="1.8" className="w-4 h-4" aria-hidden="true">
         <circle cx="12" cy="12" r="9" />
@@ -71,7 +71,7 @@ const About = () => {
 
               {/* 25+ years badge */}
               <div className="absolute bottom-0 right-0 bg-[#C8962B] text-[#FBF9F5] px-6 py-5 text-center min-w-25">
-                <span className="block font-serif text-[40px] font-bold leading-none tracking-tight">17</span>
+                <span className="block font-serif text-[40px] font-bold leading-none tracking-tight">21</span>
                 <span className="block text-[10px] font-semibold uppercase tracking-widest mt-1 opacity-90 leading-tight">
                   Years of<br />Ministry
                 </span>
@@ -105,8 +105,8 @@ const About = () => {
 
             {/* Heading */}
             <h2 className="font-serif text-[34px] sm:text-[40px] lg:text-[46px] font-bold text-slate-900 leading-tight tracking-tight mb-3">
-              Transforming Lives<br />
-              <span className="text-[#C8962B]">Restoring Destinies.</span>
+              The Man Behind<br />
+              <span className="text-[#C8962B]">The Mandate.</span>
             </h2>
 
             {/* Gold rule */}

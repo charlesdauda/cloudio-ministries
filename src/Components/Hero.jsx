@@ -9,11 +9,11 @@ const images = [heroImageOne, heroImageTwo];
 const slides = [
   {
     eyebrow: "TEACHING TRUTH. BUILDING LEADERS. TRANSFORMING NATIONS.",
-    line1: "Inspiring Sermons.",
-    line2Plain: "Rooted in The ",
-    line2Gold: "Word.",
+    line1: "Revealing Truth.",
+    line2Plain: "Transforming ",
+    line2Gold: "Destinies.",
     paragraph:
-      "Through the Gospel of Jesus Christ, we equip people with biblical truth and leadership wisdom to impact lives and transform nations.",
+      "Through revelatory teaching and biblical exposition, Dr. Cloudio unveils Kingdom truths that transform lives, restore destinies, and strengthen believers in their walk with Yeshuah.",
   },
   {
     eyebrow: "SOUND DOCTRINE. LASTING IMPACT. GLOBAL REACH.",
@@ -21,7 +21,7 @@ const slides = [
     line2Plain: "Colossals For ",
     line2Gold: "Yeshuah.",
     paragraph:
-      "From the pulpit to the nations, we proclaim Christ and disciple leaders who carry His message forward.",
+      "Through teaching, discipleship, and spiritual impartation, Dr. Cloudio is raising spiritual colossals who carry the life, power, and message of Yeshuah.",
   },
 ];
 
@@ -177,10 +177,10 @@ const Hero = () => {
       {/* Quote overlay — tablet + desktop */}
       <div className="absolute bottom-10 right-6 z-30 hidden max-w-57.5 text-right sm:block lg:right-12">
         <p className="font-serif text-[13px] italic leading-snug text-white drop-shadow-md lg:text-[15px]">
-          "Go into all the world and preach the gospel to all creation."
+          "Because it has been given unto you to know the mysteries of the kingdom of heaven, but to them it has not been given."
         </p>
         <p className="mt-2 text-[11px] font-semibold uppercase tracking-wide text-[#E3B458] lg:text-[12px]">
-          — Mark 16:15
+          — Matthew 13:11
         </p>
       </div>
     </section>

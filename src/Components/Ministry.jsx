@@ -16,37 +16,37 @@ const pillars = [
     num: "01", img: img1,
     icon: <BookOpen size={26} strokeWidth={1.6} />,
     title: "Apostolic Mandate",
-    body: "Grounded in the foundation of the apostles and prophets, we carry a divine assignment to plant, establish, and govern God's purposes in the earth.",
+    body: "Grounded in the foundation of the apostles and prophets, Dr Cloudio carries a divine assignment to plant, establish, and govern God's purposes on the earth.",
   },
   {
     num: "02", img: img2,
     icon: <Zap size={26} strokeWidth={1.6} />,
     title: "Prophetic Ministry",
-    body: "We hear what the Spirit is saying to the Church and declare it with clarity and boldness — calling forth destinies and aligning seasons.",
+    body: "Through prophetic revelation and spiritual discernment, Dr Cloudio communicates the heart and mind of God, bringing direction, correction, and clarity to individuals and nations.",
   },
   {
     num: "03", img: img3,
     icon: <Flame size={26} strokeWidth={1.6} />,
     title: "Healing & Revival",
-    body: "Signs, wonders, and the tangible presence of God mark our gatherings. Healing — body, soul, and spirit — is the children's bread.",
+    body: "Through the power of the Holy Spirit, Dr. Cloudio ministers healing, deliverance, and restoration, bringing freedom to those oppressed and hope to the broken.",
   },
   {
     num: "04", img: img4,
     icon: <Globe size={26} strokeWidth={1.6} />,
     title: "Mystical Teachings",
-    body: "We go beyond the surface of Scripture into deep Kingdom mysteries — unlocking revelation that transforms the mind and renews the spirit.",
+    body: "With a unique grace for unveiling Kingdom mysteries, Dr. Cloudio teaches profound spiritual realities that deepen believers' understanding of God and His purposes.",
   },
   {
     num: "05", img: img5,
     icon: <Users size={26} strokeWidth={1.6} />,
-    title: "Counseling & Care",
-    body: "Through Spirit-led counsel and pastoral care, we walk with individuals into wholeness, identity, and personal breakthrough.",
+    title: "Counseling & Mentorship",
+    body: "Through wisdom, mentorship, and pastoral counsel, Dr. Cloudio guides individuals toward purpose, helping them navigate life with faith, wisdom, and conviction.",
   },
   {
     num: "06", img: img6,
     icon: <Heart size={26} strokeWidth={1.6} />,
-    title: "Nations & Missions",
-    body: "From Accra to the ends of the earth — we take the Gospel beyond borders, equipping local carriers and sending teams worldwide.",
+    title: "Biblical Exposition",
+    body: "Through wisdom, mentorship, and pastoral counsel, Dr. Cloudio guides individuals toward purpose, helping them navigate life with faith, wisdom, and conviction.",
   },
 ];
 
@@ -63,17 +63,17 @@ const bannerLinks = [
         <path d="M23 21v-2a4 4 0 00-3-3.87M16 3.13a4 4 0 010 7.75"/>
       </svg>
     ),
-    label: "Join a\nCommunity", href: "#events",
+    label: "Follow\nUs", href: "#events",
   },
   {
     icon: (
-      <svg viewBox="0 0 24 24" fill="none" stroke="#C8962B" strokeWidth="1.4" className="h-6.5 w-6.5">
-        <path d="M18 8h1a4 4 0 010 8h-1"/>
-        <path d="M2 8h16v9a4 4 0 01-4 4H6a4 4 0 01-4-4V8z"/>
-        <line x1="6" y1="1" x2="6" y2="4"/><line x1="10" y1="1" x2="10" y2="4"/><line x1="14" y1="1" x2="14" y2="4"/>
-      </svg>
+        <svg viewBox="0 0 24 24" fill="none" stroke="#C8962B" strokeWidth="1.4" className="h-6.5 w-6.5">
+            <path d="M3 18v-6a9 9 0 0 1 18 0v6" strokeLinecap="round"/>
+            <path d="M21 19a2 2 0 0 1-2 2h-1a2 2 0 0 1-2-2v-3a2 2 0 0 1 2-2h3z"/>
+            <path d="M3 19a2 2 0 0 0 2 2h1a2 2 0 0 0 2-2v-3a2 2 0 0 0-2-2H3z"/>
+        </svg>
     ),
-    label: "Request\nPrayer", href: "#contact",
+    label: "Listen to\nSermons", href: "#contact",
   },
   {
     icon: (
@@ -255,31 +255,22 @@ const Ministry = () => {
           className="pointer-events-none absolute top-0 right-0 h-full w-[60%] bg-top-right bg-no-repeat opacity-30 lg:opacity-40"
           style={{ backgroundImage: `url(${worldMap})`, backgroundSize: "contain" }}
         />
-        <svg className="pointer-events-none absolute top-8 right-0 hidden h-64 w-[55%] lg:block" viewBox="0 0 600 260" fill="none">
-          <circle cx="300" cy="80"  r="4" fill="#C8962B" opacity="0.8"/>
-          <circle cx="490" cy="140" r="4" fill="#C8962B" opacity="0.8"/>
-          <circle cx="160" cy="180" r="4" fill="#C8962B" opacity="0.8"/>
-          <circle cx="390" cy="210" r="4" fill="#C8962B" opacity="0.8"/>
-          <path d="M300 80 Q400 30 490 140"  stroke="#C8962B" strokeWidth="1" opacity="0.5" fill="none"/>
-          <path d="M490 140 Q450 200 390 210" stroke="#C8962B" strokeWidth="1" opacity="0.5" fill="none"/>
-          <path d="M300 80 Q220 140 160 180"  stroke="#C8962B" strokeWidth="1" opacity="0.5" fill="none"/>
-          <path d="M160 180 Q260 200 390 210" stroke="#C8962B" strokeWidth="1" opacity="0.4" fill="none"/>
-        </svg>
+
         <div className="relative mx-auto max-w-7xl">
           <p className="mb-4 text-[11px] font-bold uppercase tracking-[0.2em] text-[#C8962B]">
-            Our Ministry
+            Ministry
           </p>
           <h2 className="mb-4 max-w-xl font-serif text-[34px] font-bold leading-[1.1] tracking-tight text-slate-900 sm:text-[44px] lg:text-[54px]">
-            Raising Leaders.{" "}
+            Expressions of{" "}
             <br className="hidden sm:block" />
-            Reaching{" "}
-            <span className="font-serif italic text-[#C8962B]">Nations.</span>
+            the{" "}
+            <span className="font-serif italic text-[#C8962B]">Mandate.</span>
           </h2>
           <div className="mb-3 h-0.5 w-10 bg-[#C8962B]" />
           <p className="max-w-md text-[15px] leading-relaxed text-slate-500">
-            Everything we do flows from one mission — to glorify God by teaching
-            the Word, transforming lives, raising leaders, and taking the Gospel
-            to the nations.
+           Rooted in the Word and empowered by the Holy Spirit, this ministry exists to restore lives, 
+           reveal Kingdom mysteries, raise transformational leaders, 
+           and advance God's purpose across nations.
           </p>
         </div>
       </div>
