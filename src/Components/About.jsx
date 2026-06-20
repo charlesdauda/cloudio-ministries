@@ -120,7 +120,7 @@ const About = () => {
             </p>
             <p className="text-[14px] lg:text-[15px] leading-relaxed text-slate-600">
               With a deep commitment to the Word and the Holy Spirit, he has ministered in over{" "}
-              <strong className="font-semibold text-slate-900">40 countries</strong>, equipping
+              <strong className="font-semibold text-slate-900">10 countries</strong>, equipping
               believers and igniting revival everywhere he goes.
             </p>
 

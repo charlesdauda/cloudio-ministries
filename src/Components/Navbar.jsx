@@ -1,7 +1,5 @@
 import { useState, useEffect } from "react";
 import { Menu, X } from "lucide-react";
-
-// Place your logo file inside src/assets/ and update this path/filename
 import logo from "../assets/Images/apslogo.png";
 
 const navLinks = [
@@ -51,8 +49,6 @@ const Navbar = () => {
           </span>
         </a>
 
-        {/* Centered nav links - desktop. Absolute + translate guarantees true
-            center regardless of logo width or right-side content. */}
         <ul className="absolute left-1/2 hidden -translate-x-1/2 items-center gap-8 lg:flex">
           {navLinks.map((link) => (
             <li key={link.name}>
@@ -74,7 +70,6 @@ const Navbar = () => {
           ))}
         </ul>
 
-        {/* Mobile toggle */}
         <button
           onClick={() => setMobileOpen((v) => !v)}
           className="text-slate-800 lg:hidden"
@@ -83,8 +78,7 @@ const Navbar = () => {
           {mobileOpen ? <X size={24} /> : <Menu size={24} />}
         </button>
       </div>
-
-      {/* Mobile menu */}
+      
       {mobileOpen && (
         <ul className="flex flex-col gap-1 border-t border-slate-100 bg-white px-6 py-4 lg:hidden">
           {navLinks.map((link) => (

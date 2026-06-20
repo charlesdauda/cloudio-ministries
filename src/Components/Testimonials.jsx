@@ -24,7 +24,7 @@ const testimonials = [
     category: "Financial Breakthrough",
     image: t2,
     quote:
-      "From debt to abundance — God turned my situation around completely. Doors opened that I never even knocked on. I am living proof of His faithfulness.",
+      "From debt to abundance God turned my situation around completely. Doors opened that I never even knocked on. I am living proof of His faithfulness.",
   },
   {
     name: "Thabo R.",

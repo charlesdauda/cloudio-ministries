@@ -4,6 +4,7 @@
 - [x] A scripture, 2 set related to ministry and the word of God
 - [x] Nations reached, Global Impact ststistics in a form of banner
 - [x] About Pastor as well as mandate
+- [x] Spotify Banner 
 - [] List of message section
 - [] News Letter
 - [] Footer

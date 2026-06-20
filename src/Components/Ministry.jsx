@@ -203,14 +203,10 @@ const MobileCarousel = () => {
         style={{
           scrollbarWidth: "none",
           msOverflowStyle: "none",
-          // scroll-padding ensures snap targets honour the left gap
           scrollPaddingLeft: `${GAP}px`,
         }}
       >
         <style>{`#ministry-track::-webkit-scrollbar{display:none}`}</style>
-
-        {/* ✅ THIS is what actually creates the visual gap on the left.
-            A proper flex child that browsers cannot collapse. */}
         <div className="flex-none" style={{ width: `${GAP}px`, minWidth: `${GAP}px` }} aria-hidden="true" />
 
         {pillars.map((p, i) => (
@@ -243,13 +239,9 @@ const MobileCarousel = () => {
     </div>
   );
 };
-
-/* ─── Ministry Section ──────────────────────────────────────────────── */
 const Ministry = () => {
   return (
     <section id="ministry" className="scroll-mt-24 overflow-hidden bg-[#FBF9F5]">
-
-      {/* ── HEADLINE + MAP ─────────────────────────────────────────────── */}
       <div className="relative px-5 pt-24 pb-16 lg:pt-28 lg:pb-20">
         <div
           className="pointer-events-none absolute top-0 right-0 h-full w-[60%] bg-top-right bg-no-repeat opacity-30 lg:opacity-40"
@@ -275,10 +267,7 @@ const Ministry = () => {
         </div>
       </div>
 
-      {/* ── MOBILE / TABLET CAROUSEL ────────────────────────────────────── */}
       <MobileCarousel />
-
-      {/* ── DESKTOP 3-COL GRID ──────────────────────────────────────────── */}
       <div className="hidden lg:block px-6 pb-20">
         <div className="mx-auto max-w-7xl grid grid-cols-3 gap-8">
           {pillars.map((p) => (
@@ -286,8 +275,7 @@ const Ministry = () => {
           ))}
         </div>
       </div>
-
-      {/* ── DARK BANNER ─────────────────────────────────────────────────── */}
+      
       <div className="relative overflow-hidden bg-slate-900">
         <div
           className="pointer-events-none absolute inset-y-0 left-0 w-65 hidden lg:block"
