@@ -84,18 +84,8 @@ const bannerLinks = [
     ),
     label: "Attend an\nEvent", href: "#events",
   },
-  /*{
-    icon: (
-      <svg viewBox="0 0 24 24" fill="none" stroke="#C8962B" strokeWidth="1.4" className="h-6.5 w-6.5">
-        <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/>
-        <polyline points="22,6 12,13 2,6"/>
-      </svg>
-    ),
-    label: "Partner\nWith Us", href: "#contact",
-  }, */
 ];
 
-/* ─── Single card ───────────────────────────────────────────────────── */
 const PillarCard = ({ p }) => (
   <div className="group shrink-0 w-[78vw] sm:w-[52vw] lg:w-auto rounded-sm bg-white shadow-[0_2px_16px_rgba(0,0,0,0.07)] transition-shadow duration-300 hover:shadow-[0_6px_32px_rgba(0,0,0,0.13)]">
     <div className="relative">
@@ -131,7 +121,6 @@ const PillarCard = ({ p }) => (
   </div>
 );
 
-/* ─── Auto-swipe carousel (mobile/tablet) ───────────────────────────── */
 const MobileCarousel = () => {
   const [current, setCurrent] = useState(0);
   const trackRef = useRef(null);
@@ -139,7 +128,6 @@ const MobileCarousel = () => {
   const intervalRef = useRef(null);
   const total = pillars.length;
 
-  // scroll-padding-left on the track makes scrollIntoView respect the 20px gap
   const GAP = 20;
 
   const scrollToCard = useCallback((idx) => {
@@ -223,7 +211,6 @@ const MobileCarousel = () => {
         <div className="flex-none" style={{ width: `${GAP}px`, minWidth: `${GAP}px` }} aria-hidden="true" />
       </div>
 
-      {/* Pill dots */}
       <div className="flex justify-center gap-2 pt-4 pb-12">
         {pillars.map((_, i) => (
           <button
@@ -275,7 +262,7 @@ const Ministry = () => {
           ))}
         </div>
       </div>
-      
+
       <div className="relative overflow-hidden bg-slate-900">
         <div
           className="pointer-events-none absolute inset-y-0 left-0 w-65 hidden lg:block"
