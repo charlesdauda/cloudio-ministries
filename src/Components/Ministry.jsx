@@ -97,9 +97,9 @@ const bannerLinks = [
 
 /* ─── Single card ───────────────────────────────────────────────────── */
 const PillarCard = ({ p }) => (
-  <div className="group shrink-0 w-[78vw] sm:w-[52vw] lg:w-auto rounded-2xl bg-white shadow-[0_2px_16px_rgba(0,0,0,0.07)] transition-shadow duration-300 hover:shadow-[0_6px_32px_rgba(0,0,0,0.13)]">
+  <div className="group shrink-0 w-[78vw] sm:w-[52vw] lg:w-auto rounded-sm bg-white shadow-[0_2px_16px_rgba(0,0,0,0.07)] transition-shadow duration-300 hover:shadow-[0_6px_32px_rgba(0,0,0,0.13)]">
     <div className="relative">
-      <div className="relative h-52 overflow-hidden rounded-t-2xl">
+      <div className="relative h-52 overflow-hidden rounded-t-sm">
         <img
           src={p.img}
           alt={p.title}

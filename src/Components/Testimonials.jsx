@@ -69,7 +69,7 @@ const Avatar = ({ t }) => (
 );
 
 const TestiCard = ({ t }) => (
-  <div className="flex flex-col items-center text-center px-6 pt-8 pb-7 bg-white rounded-2xl border border-slate-100 shadow-[0_2px_16px_rgba(0,0,0,0.06)] hover:shadow-[0_8px_28px_rgba(0,0,0,0.10)] hover:-translate-y-0.5 transition-all duration-300 h-full">
+  <div className="flex flex-col items-center text-center px-6 pt-8 pb-7 bg-white rounded-sm border border-slate-100 shadow-[0_2px_16px_rgba(0,0,0,0.06)] hover:shadow-[0_8px_28px_rgba(0,0,0,0.10)] hover:-translate-y-0.5 transition-all duration-300 h-full">
     <Avatar t={t} />
 
     <p className="mt-4 text-[10px] font-bold uppercase tracking-[0.18em] text-[#C8962B]">

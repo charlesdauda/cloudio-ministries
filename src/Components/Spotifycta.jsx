@@ -53,7 +53,7 @@ const SpotifyCTA = () => {
 
             {/* Subtext */}
             <p className="mt-4 max-w-sm text-[13px] leading-relaxed text-white/45">
-              Powerful teachings. Revealing messages. Transforming lives — available anytime.
+              Powerful teachings. Revealing messages. Transforming lives available anytime.
             </p>
 
             {/* Rule */}
