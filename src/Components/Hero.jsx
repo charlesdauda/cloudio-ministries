@@ -1,6 +1,5 @@
 import { useState, useEffect } from "react";
 import { Play, UserPlus, Globe, Users, Trophy, BookOpen } from "lucide-react";
-
 import heroImageOne from "../assets/Images/apshero1.png";
 import heroImageTwo from "../assets/Images/apshero3.png";
 
@@ -8,180 +7,145 @@ const images = [heroImageOne, heroImageTwo];
 
 const slides = [
   {
-    eyebrow: "TEACHING TRUTH. BUILDING LEADERS. TRANSFORMING NATIONS.",
+    eyebrow: "Teaching Truth · Building Leaders · Transforming Nations",
     line1: "Revealing Truth.",
     line2Plain: "Transforming ",
     line2Gold: "Destinies.",
-    paragraph:
-      "Through revelatory teaching and biblical exposition, Dr. Cloudio unveils Kingdom truths that transform lives, restore destinies, and strengthen believers in their walk with Yeshuah.",
+    paragraph: "Through revelatory teaching and biblical exposition, Dr. Cloudio unveils Kingdom truths that transform lives, restore destinies, and strengthen believers in their walk with Yeshuah.",
   },
   {
-    eyebrow: "SOUND DOCTRINE. LASTING IMPACT. GLOBAL REACH.",
-    line1: "Building Spiritual ",
-    line2Plain: "Colossals For ",
+    eyebrow: "Sound Doctrine · Lasting Impact · Global Reach",
+    line1: "Building ",
+    line2Plain: " Spiritual Colossals For ",
     line2Gold: "Yeshuah.",
-    paragraph:
-      "Through teaching, discipleship, and spiritual impartation, Dr. Cloudio is raising spiritual colossals who carry the life, power, and message of Yeshuah.",
+    paragraph: "Through teaching, discipleship, and spiritual impartation, Dr. Cloudio is raising spiritual colossals who carry the life, power, and message of Yeshuah.",
   },
 ];
 
 const heroStyles = `
-  @keyframes kenburns {
-    0% { transform: scale(1); }
-    100% { transform: scale(1.12); }
-  }
-  .animate-kenburns {
-    animation: kenburns 7s ease-out forwards;
-  }
-  @keyframes herofadein {
-    0% { opacity: 0; transform: translateY(8px); }
-    100% { opacity: 1; transform: translateY(0); }
-  }
-  .animate-herofadein {
-    animation: herofadein 800ms ease-out both;
-  }
+  @keyframes kenburns { 0%{transform:scale(1)} 100%{transform:scale(1.1)} }
+  .kburn { animation: kenburns 8s ease-out forwards; }
+  @keyframes hfade { 0%{opacity:0;transform:translateY(10px)} 100%{opacity:1;transform:translateY(0)} }
+  .hfade { animation: hfade 700ms ease-out both; }
 `;
 
 const Stat = ({ icon, value, label }) => (
   <div className="flex items-center gap-3">
-    <span className="text-slate-700">{icon}</span>
+    <span className="text-[#1A1209]/35">{icon}</span>
     <div>
-      <p className="text-[15px] font-bold text-slate-900">{value}</p>
-      <p className="text-[12px] text-slate-500">{label}</p>
+      <p className="text-[15px] font-['DM_Serif_Display'] italic text-[#1A1209]">{value}</p>
+      <p className="text-[11px] text-[#1A1209]/45 tracking-wide" style={{ fontFamily:"Inter,sans-serif" }}>{label}</p>
     </div>
   </div>
 );
 
-const Divider = () => <span className="hidden h-8 w-px bg-slate-200 sm:block" />;
+const Divider = () => <span className="hidden h-7 w-px bg-[#E8E3DA] sm:block" />;
 
 const Hero = () => {
   const [activeIndex, setActiveIndex] = useState(0);
   const [flash, setFlash] = useState(false);
 
   useEffect(() => {
-    const interval = setInterval(() => {
+    const id = setInterval(() => {
       setFlash(true);
-      const swap = setTimeout(() => {
-        setActiveIndex((i) => (i + 1) % images.length);
-      }, 280);
-      const clearFlash = setTimeout(() => setFlash(false), 700);
-      return () => {
-        clearTimeout(swap);
-        clearTimeout(clearFlash);
-      };
+      const s = setTimeout(() => setActiveIndex((i) => (i + 1) % images.length), 280);
+      const c = setTimeout(() => setFlash(false), 700);
+      return () => { clearTimeout(s); clearTimeout(c); };
     }, 6500);
-    return () => clearInterval(interval);
+    return () => clearInterval(id);
   }, []);
 
   const current = slides[activeIndex];
 
   return (
-    <section
-      id="home"
-      className="relative mt-18 overflow-hidden lg:mt-20 lg:min-h-170"
-      style={{ minHeight: "calc(100svh - 4.5rem)" }}
-    >
+    <section id="home" className="relative mt-16 overflow-hidden lg:mt-18"
+             style={{ minHeight: "calc(100svh - 4rem)" }}>
       <style>{heroStyles}</style>
 
-      {/* Background images */}
+      {/* BG images */}
       <div className="absolute inset-0 z-0">
         {images.map((src, idx) => (
-          <div
-            key={idx}
-            className={`absolute inset-0 transition-opacity duration-1200 ease-in-out ${
-              idx === activeIndex ? "opacity-100" : "opacity-0"
-            }`}
-          >
-            <div
-              key={activeIndex === idx ? "active" : "idle"}
-              className="h-full w-full bg-cover bg-center animate-kenburns"
-              style={{ backgroundImage: `url(${src})` }}
-            />
+          <div key={idx} className={`absolute inset-0 transition-opacity duration-1200 ${idx === activeIndex ? "opacity-100" : "opacity-0"}`}>
+            <div key={activeIndex === idx ? "a" : "i"} className="h-full w-full bg-cover bg-center kburn"
+                 style={{ backgroundImage:`url(${src})` }} />
           </div>
         ))}
       </div>
 
-      {/* Mobile only: dark overlay */}
-      <div className="absolute inset-0 z-10 bg-black/55 sm:hidden" />
+      {/* Tablet + desktop gradient */}
+      <div className="absolute inset-0 z-10 hidden sm:block"
+           style={{ background:"linear-gradient(to right, #FAFAF7 0%, #FAFAF7 33%, rgba(250,250,247,0.82) 50%, transparent 65%)" }} />
 
-      {/* Tablet + desktop: ivory-to-photo gradient */}
-      <div className="absolute inset-0 z-10 hidden bg-linear-to-r from-[#FBF9F5] from-0% via-[#FBF9F5] via-40% to-transparent to-62% sm:block" />
+      {/* Flash */}
+      <div className={`pointer-events-none absolute inset-0 z-20 bg-white transition-opacity duration-500 ${flash?"opacity-20":"opacity-0"}`} />
 
-      {/* Cinematic transition flash */}
-      <div
-        className={`pointer-events-none absolute inset-0 z-20 bg-white transition-opacity duration-500 ${
-          flash ? "opacity-25" : "opacity-0"
-        }`}
-      />
+      {/* Content */}
+      <div className="absolute inset-0 z-30 flex flex-col items-center justify-center px-5 pb-10 pt-10 text-center sm:mx-auto sm:max-w-7xl sm:items-start sm:justify-start sm:px-8 sm:pt-20 sm:text-left lg:px-12 lg:pt-24">
+        <div key={activeIndex} className="w-full max-w-[88%] hfade sm:max-w-md lg:max-w-xl">
 
-      {/* Content layer */}
-      <div className="absolute inset-0 z-30 flex flex-col items-center justify-center px-5 pb-12 pt-10 text-center sm:mx-auto sm:max-w-7xl sm:items-start sm:justify-start sm:px-8 sm:pt-20 sm:text-left lg:px-12 lg:pt-24">
-
-        <div key={activeIndex} className="w-full max-w-[90%] animate-herofadein sm:max-w-md lg:max-w-xl">
           {/* Eyebrow */}
-          <div className="mb-3 flex items-center justify-center gap-3 sm:mb-4 sm:justify-start">
-            <span className="h-0.5 w-6 shrink-0 bg-[#C8962B] sm:w-8" />
-            <p className="text-[10px] font-bold uppercase tracking-[0.14em] text-[#C8962B] sm:text-[11px] lg:text-[12px]">
+          <div className="mb-4 flex items-center justify-center gap-3 sm:justify-start">
+            <span className="h-px w-6 shrink-0 bg-[#A97C2F]" />
+            <p className="text-[9.5px] font-semibold uppercase tracking-[0.2em] text-[#A97C2F]"
+               style={{ fontFamily:"Inter,sans-serif" }}>
               {current.eyebrow}
             </p>
           </div>
 
-          {/* Headline */}
-          <h1 className="font-serif text-[32px] font-bold leading-tight text-white sm:text-[36px] sm:text-slate-900 lg:text-[50px]">
+          {/* Headline — DM Serif Display, not bold, italic on gold part */}
+          <h1 className="font-['DM_Serif_Display'] leading-[1.1] text-white sm:text-[#1A1209]"
+              style={{ fontSize:"clamp(36px, 5.5vw, 60px)" }}>
             <span className="block">{current.line1}</span>
             <span className="block">
               {current.line2Plain}
-              <span className="text-[#C8962B]">{current.line2Gold}</span>
+              <em style={{ color:"#A97C2F", fontStyle:"italic" }}>{current.line2Gold}</em>
             </span>
           </h1>
 
           {/* Paragraph */}
-          <p className="mx-auto mt-4 max-w-sm text-[14px] leading-relaxed text-white/90 sm:mx-0 sm:mt-4 sm:max-w-xs sm:text-[14px] sm:text-slate-600 lg:max-w-md lg:text-[15px]">
+          <p className="mx-auto mt-5 max-w-sm text-[13.5px] leading-[1.85] text-white/75 sm:mx-0 sm:text-[#1A1209]/55 lg:max-w-sm"
+             style={{ fontFamily:"Inter,sans-serif" }}>
             {current.paragraph}
           </p>
         </div>
 
         {/* Buttons */}
-        <div className="mt-7 flex flex-row items-center justify-center gap-3 sm:justify-start sm:gap-4">
-          <button className="flex items-center justify-center gap-2 rounded-md bg-[#C8962B] px-5 py-3 text-[12px] font-bold uppercase tracking-wide text-white shadow-sm transition-colors hover:bg-[#B3841F] sm:px-6 sm:text-[13px]">
-            <Play size={14} fill="currentColor" className="sm:hidden" />
-            <Play size={16} fill="currentColor" className="hidden sm:block" />
-            Watch Messages
+        <div className="mt-8 flex flex-row items-center justify-center gap-3 sm:justify-start"
+             style={{ fontFamily:"Inter,sans-serif" }}>
+          <button className="flex items-center gap-2 px-6 py-3 text-[11px] font-semibold uppercase tracking-[0.14em] text-white transition-all hover:opacity-90"
+                  style={{ background:"#A97C2F" }}>
+            <Play size={13} fill="currentColor" /> Watch Messages
           </button>
-          <button className="flex items-center justify-center gap-2 rounded-md border border-white/60 bg-white/10 px-5 py-3 text-[12px] font-bold uppercase tracking-wide text-white backdrop-blur-sm transition-colors hover:bg-white/20 sm:border-slate-300 sm:bg-white sm:px-6 sm:text-[13px] sm:text-slate-800 sm:hover:bg-slate-50 sm:backdrop-blur-none lg:border-slate-300 lg:bg-white lg:text-slate-800 lg:hover:bg-slate-50">
-            <UserPlus size={14} className="sm:hidden" />
-            <UserPlus size={16} className="hidden sm:block" />
-            Invite Pastor
+          <button className="flex items-center gap-2 border border-white/50 bg-white/10 px-6 py-3 text-[11px] font-semibold uppercase tracking-[0.14em] text-white backdrop-blur-sm transition-all hover:bg-white/20 sm:border-[#E8E3DA] sm:bg-[#FAFAF7] sm:text-[#1A1209] sm:backdrop-blur-none sm:hover:bg-[#F0EBE3]">
+            <UserPlus size={13} /> Invite Pastor
           </button>
         </div>
 
-        {/* Stats row — tablet + desktop */}
-        <div className="mt-8 hidden max-w-3xl flex-wrap items-center gap-x-6 gap-y-5 border-t border-slate-200/70 pt-6 sm:flex lg:mt-12 lg:gap-x-8 lg:gap-y-6 lg:pt-7">
-          <Stat icon={<Globe size={22} strokeWidth={1.5} />} value="10+" label="Countries Reached" />
+        {/* Stats */}
+        <div className="mt-10 hidden flex-wrap items-center gap-x-7 gap-y-5 border-t border-[#E8E3DA] pt-7 sm:flex lg:mt-14">
+          <Stat icon={<Globe size={20} strokeWidth={1.4}/>}  value="10+" label="Countries Reached" />
           <Divider />
-          <Stat icon={<Users size={22} strokeWidth={1.5} />} value="1K+" label="Lives Impacted" />
+          <Stat icon={<Users size={20} strokeWidth={1.4}/>}  value="1K+" label="Lives Impacted" />
           <Divider />
-          <Stat icon={<Trophy size={22} strokeWidth={1.5} />} value="25+" label="Years of Ministry" />
+          <Stat icon={<Trophy size={20} strokeWidth={1.4}/>} value="21+" label="Years of Ministry" />
           <Divider />
           <div className="flex items-center gap-3">
-            <BookOpen size={22} strokeWidth={1.5} className="text-slate-700 lg:hidden" />
-            <BookOpen size={26} strokeWidth={1.5} className="hidden text-slate-700 lg:block" />
+            <BookOpen size={20} strokeWidth={1.4} className="text-[#1A1209]/35" />
             <div>
-              <p className="text-[13px] font-bold text-slate-900 lg:text-[14px]">Biblical Teaching</p>
-              <p className="text-[11px] text-slate-500 lg:text-[12px]">Sound doctrine. Relevant. Timeless.</p>
+              <p className="font-['DM_Serif_Display'] text-[15px] italic text-[#1A1209]">Biblical Teaching</p>
+              <p className="text-[11px] text-[#1A1209]/45" style={{ fontFamily:"Inter,sans-serif" }}>Sound doctrine. Timeless.</p>
             </div>
           </div>
         </div>
       </div>
 
-      {/* Quote overlay — tablet + desktop */}
-      <div className="absolute bottom-10 right-6 z-30 hidden max-w-57.5 text-right sm:block lg:right-12">
-        <p className="font-serif text-[13px] italic leading-snug text-white drop-shadow-md lg:text-[15px]">
-          "Because it has been given unto you to know the mysteries of the kingdom of heaven, but to them it has not been given."
+      {/* Scripture */}
+      <div className="absolute bottom-8 right-6 z-30 hidden max-w-65 text-right sm:block lg:right-12">
+        <p className="font-['DM_Serif_Display'] text-[13px] italic leading-relaxed text-white/80 drop-shadow lg:text-[15px]">
+          "Because it has been given unto you to know the mysteries of the kingdom of heaven."
         </p>
-        <p className="mt-2 text-[11px] font-semibold uppercase tracking-wide text-[#E3B458] lg:text-[12px]">
-          — Matthew 13:11
-        </p>
+        <p className="mt-2 text-[10px] font-semibold uppercase tracking-[0.18em] text-[#A97C2F]"
+           style={{ fontFamily:"Inter,sans-serif" }}>— Matthew 13:11</p>
       </div>
     </section>
   );
