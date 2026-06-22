@@ -72,9 +72,6 @@ const Hero = () => {
         ))}
       </div>
 
-      {/* Mobile scrim */}
-      <div className="absolute inset-0 z-10 bg-[#1A1209]/62 sm:hidden" />
-
       {/* Tablet + desktop gradient */}
       <div className="absolute inset-0 z-10 hidden sm:block"
            style={{ background:"linear-gradient(to right, #FAFAF7 0%, #FAFAF7 33%, rgba(250,250,247,0.82) 50%, transparent 65%)" }} />

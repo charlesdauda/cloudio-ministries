@@ -134,8 +134,7 @@ const Ministry = () => (
     <div className="mx-auto max-w-7xl px-5 pb-20 sm:px-8 lg:px-12">
       <Carousel />
     </div>
-
-    {/* Dark banner — kept as-is */}
+    
     <div className="relative overflow-hidden bg-[#0F0D0B]">
       <div className="pointer-events-none absolute inset-y-0 left-0 w-64 hidden lg:block"
            style={{ backgroundImage:`url(${pastorBanner})`, backgroundSize:"cover", backgroundPosition:"center top" }}>

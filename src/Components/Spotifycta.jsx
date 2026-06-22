@@ -16,11 +16,7 @@ const features = [
 const SpotifyCTA = () => {
   return (
     <section className="relative overflow-hidden" style={{ background: "#0F0D0B" }}>
-
-      {/* ── Background layers ── */}
       <div className="absolute inset-0 z-0">
-
-        {/* Pastor photo — left half on desktop, full on mobile */}
         <div
           className="absolute inset-y-0 left-0 w-full lg:w-[52%]"
           style={{
@@ -30,7 +26,6 @@ const SpotifyCTA = () => {
           }}
         />
 
-        {/* Fade photo into dark right side — desktop */}
         <div
           className="absolute inset-y-0 left-0 hidden w-[52%] lg:block"
           style={{
@@ -38,36 +33,30 @@ const SpotifyCTA = () => {
           }}
         />
 
-        {/* Dark scrim — mobile so text is legible over full photo */}
         <div
           className="absolute inset-0 lg:hidden"
           style={{ background: "rgba(15,13,11,0.72)" }}
         />
 
-        {/* Soft gold warmth at bottom-left corner */}
         <div
           className="pointer-events-none absolute -bottom-20 -left-20 h-72 w-72 rounded-full opacity-[0.07]"
           style={{ background: "radial-gradient(circle, #A97C2F 0%, transparent 65%)" }}
         />
 
-        {/* Very subtle Spotify green at bottom-right */}
         <div
           className="pointer-events-none absolute -bottom-10 right-0 h-56 w-56 rounded-full opacity-[0.05]"
           style={{ background: "radial-gradient(circle, #1DB954 0%, transparent 65%)" }}
         />
       </div>
 
-      {/* ── Content ── */}
       <div className="relative z-10 mx-auto max-w-7xl px-5 sm:px-8 lg:px-12">
         <div className="grid grid-cols-1 lg:grid-cols-2 items-center" style={{ minHeight: "420px" }}>
 
-          {/* Left col — empty, photo shows through */}
           <div className="hidden lg:block" />
 
           {/* Right col */}
           <div className="py-12 lg:py-16 lg:pl-10">
 
-            {/* "Now streaming" eyebrow — matches Ministry's eyebrow treatment */}
             <div className="mb-6 flex items-center gap-2.5">
               <SpotifyIcon className="h-5 w-5" color="#1DB954" />
               <span
@@ -78,7 +67,6 @@ const SpotifyCTA = () => {
               </span>
             </div>
 
-            {/* Headline — DM Serif Display, matching Ministry's headline system */}
             <h2
               className="font-['DM_Serif_Display'] leading-[1.08] text-white"
               style={{ fontSize: "clamp(28px, 4vw, 44px)" }}
@@ -89,7 +77,6 @@ const SpotifyCTA = () => {
               You Are.
             </h2>
 
-            {/* Body */}
             <p
               className="mt-4 max-w-xs text-[13px] leading-[1.8]"
               style={{ color: "rgba(255,255,255,0.55)", fontFamily: "Inter,sans-serif" }}
@@ -97,10 +84,8 @@ const SpotifyCTA = () => {
               Powerful teachings. Revealing messages. Transforming lives — available anytime, anywhere.
             </p>
 
-            {/* Gold rule */}
             <div className="mt-5 h-px w-8" style={{ background: "#A97C2F" }} />
 
-            {/* Search hint */}
             <p
               className="mt-5 text-[12px]"
               style={{ color: "rgba(255,255,255,0.45)", fontFamily: "Inter,sans-serif" }}
@@ -111,7 +96,6 @@ const SpotifyCTA = () => {
               </span>
             </p>
 
-            {/* CTA button — Spotify brand green retained for recognition, type matches banner labels */}
             <a
               href="https://open.spotify.com"
               target="_blank"
@@ -123,10 +107,8 @@ const SpotifyCTA = () => {
               Listen on Spotify
             </a>
 
-            {/* Divider before features */}
             <div className="mt-8 mb-6 h-px w-full" style={{ background: "rgba(255,255,255,0.08)" }} />
-
-            {/* Feature trio — bordered icon boxes echo the Ministry banner's link style */}
+            
             <div className="flex flex-wrap gap-x-7 gap-y-4">
               {features.map((f) => (
                 <div key={f.label} className="flex items-center gap-2.5">

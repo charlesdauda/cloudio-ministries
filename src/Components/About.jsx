@@ -29,7 +29,6 @@ const About = () => (
             About Dr Cloudio
           </p>
 
-          {/* Headline — exactly like the screenshot: large, elegant, italic gold part */}
           <h2 className="font-['DM_Serif_Display'] mb-6 leading-[1.1] text-[#1A1209]"
               style={{ fontSize:"clamp(36px, 4.5vw, 54px)" }}>
             The Man Behind<br />
@@ -56,8 +55,7 @@ const About = () => (
               </div>
             ))}
           </div>
-
-          {/* CTA */}
+          
           <a href="#contact"
              className="inline-flex items-center border border-[#A97C2F] px-7 py-3 text-[11px] font-semibold uppercase tracking-[0.18em] text-[#A97C2F] transition-all hover:bg-[#A97C2F] hover:text-white"
              style={{ fontFamily:"Inter,sans-serif" }}>

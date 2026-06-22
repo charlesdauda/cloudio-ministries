@@ -3,7 +3,7 @@ import { MapPin, Quote } from "lucide-react";
 
 const testimonials = [
   { name:"Joseph M.",   location:"Kumasi, Ghana",              category:"Healing & Restoration",  quote:"I was healed from a chronic illness that doctors couldn't explain. What medicine couldn't do, God did in a moment. Jesus is still healing." },
-  { name:"Blessing O.", location:"Lagos, Nigeria",             category:"Financial Breakthrough",  quote:"From debt to abundance — God turned my situation around completely. Doors opened that I never even knocked on. I am living proof of His faithfulness." },
+  { name:"Blessing O.", location:"Lagos, Nigeria",             category:"Financial Breakthrough",  quote:"From debt to abundance God turned my situation around completely. Doors opened that I never even knocked on. I am living proof of His faithfulness." },
   { name:"Thabo R.",    location:"Johannesburg, South Africa", category:"Deliverance",             quote:"I was bound for years by things I couldn't explain. One encounter with God through this ministry and I walked out completely free. No chains." },
   { name:"Jessica L.",  location:"Miami, USA",                 category:"Salvation",               quote:"I came to the crusade out of curiosity. I left with a new life. I encountered Jesus in a way I never thought possible. Everything changed that night." },
   { name:"Amara Osei",  location:"Accra, Ghana",               category:"Purpose & Calling",       quote:"I had been drifting for years with no real direction. The teaching here gave me clarity about who I am and what I was created to do. Priceless." },
@@ -15,7 +15,6 @@ const initials = (name) => name.split(" ").map((n) => n[0]).slice(0, 2).join("")
 const TestiCard = ({ t }) => (
   <div className="flex h-full flex-col bg-[#FAFAF7] border border-[#E8E3DA] shadow-[0_1px_8px_rgba(0,0,0,0.04)] hover:shadow-[0_6px_24px_rgba(0,0,0,0.08)] hover:-translate-y-0.5 transition-all duration-300 p-7 select-none">
 
-      {/* Open-quote icon — top-left accent */}
       <Quote size={30} strokeWidth={0} fill="#A97C2F" className="mb-4" />
 
       <p className="mb-4 text-[9.5px] font-semibold uppercase tracking-[0.22em] text-[#A97C2F]"

@@ -31,7 +31,6 @@ const Navbar = () => {
     >
       <div className="relative mx-auto flex max-w-7xl items-center justify-between px-6 py-4 lg:px-10">
 
-        {/* Logo */}
         <a href="#home" className="flex items-center gap-3">
           <img src={logo} alt="Cloudio Ministries" className="h-9 w-9 object-contain lg:h-10 lg:w-10" />
           <span className="flex flex-col leading-tight">
@@ -45,7 +44,6 @@ const Navbar = () => {
           </span>
         </a>
 
-        {/* Desktop links */}
         <ul className="absolute left-1/2 hidden -translate-x-1/2 items-center gap-8 lg:flex">
           {navLinks.map((link) => (
             <li key={link.name}>
@@ -68,14 +66,11 @@ const Navbar = () => {
           ))}
         </ul>
 
-
-        {/* Mobile burger */}
         <button onClick={() => setMobileOpen((v) => !v)} className="text-[#1A1209] lg:hidden">
           {mobileOpen ? <X size={22} /> : <Menu size={22} />}
         </button>
       </div>
 
-      {/* Mobile drawer */}
       {mobileOpen && (
         <div className="border-t border-[#E8E3DA] bg-[#FAFAF7] px-6 pb-6 pt-4 lg:hidden">
           <ul className="flex flex-col gap-1">
