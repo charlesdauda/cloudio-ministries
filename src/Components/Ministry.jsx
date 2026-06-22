@@ -34,7 +34,7 @@ const bannerLinks = [
 ];
 
 const PillarCard = ({ p }) => (
-  <div className="group overflow-hidden bg-[#FAFAF7] border border-[#E8E3DA] shadow-[0_1px_8px_rgba(0,0,0,0.04)] hover:shadow-[0_6px_28px_rgba(0,0,0,0.09)] transition-all duration-300 cursor-grab active:cursor-grabbing select-none">
+  <div className="group overflow-hidden bg-white border border-[#E8E3DA] shadow-[0_1px_8px_rgba(0,0,0,0.04)] hover:shadow-[0_6px_28px_rgba(0,0,0,0.09)] transition-all duration-300 cursor-grab active:cursor-grabbing select-none">
     <div className="overflow-hidden" style={{ height:"260px" }}>
       <img src={p.img} alt={p.title} draggable="false"
            className="h-full w-full object-cover transition-transform duration-700 group-hover:scale-105" />
@@ -111,7 +111,7 @@ const Carousel = () => {
 };
 
 const Ministry = () => (
-  <section id="ministry" className="scroll-mt-24 overflow-hidden bg-[#FAFAF7]">
+  <section id="ministry" className="scroll-mt-24 overflow-hidden bg-white">
     <div className="mx-auto max-w-7xl px-5 pt-24 pb-14 sm:px-8 lg:px-12 lg:pt-28 lg:pb-16">
       <div className="grid grid-cols-1 gap-8 lg:grid-cols-2 lg:items-end">
         <div>
@@ -134,7 +134,7 @@ const Ministry = () => (
     <div className="mx-auto max-w-7xl px-5 pb-20 sm:px-8 lg:px-12">
       <Carousel />
     </div>
-    
+
     <div className="relative overflow-hidden bg-[#0F0D0B]">
       <div className="pointer-events-none absolute inset-y-0 left-0 w-64 hidden lg:block"
            style={{ backgroundImage:`url(${pastorBanner})`, backgroundSize:"cover", backgroundPosition:"center top" }}>
@@ -169,7 +169,7 @@ const Ministry = () => (
         </div>
       </div>
     </div>
-    <div className="h-16 bg-[#FAFAF7]" />
+    <div className="h-16 bg-white" />
   </section>
 );
 

@@ -13,10 +13,8 @@ const testimonials = [
 const initials = (name) => name.split(" ").map((n) => n[0]).slice(0, 2).join("").toUpperCase();
 
 const TestiCard = ({ t }) => (
-  <div className="flex h-full flex-col bg-[#FAFAF7] border border-[#E8E3DA] shadow-[0_1px_8px_rgba(0,0,0,0.04)] hover:shadow-[0_6px_24px_rgba(0,0,0,0.08)] hover:-translate-y-0.5 transition-all duration-300 p-7 select-none">
-
+  <div className="flex h-full flex-col bg-white border border-[#E8E3DA] shadow-[0_1px_8px_rgba(0,0,0,0.04)] hover:shadow-[0_6px_24px_rgba(0,0,0,0.08)] hover:-translate-y-0.5 transition-all duration-300 p-7 select-none">
       <Quote size={30} strokeWidth={0} fill="#A97C2F" className="mb-4" />
-
       <p className="mb-4 text-[9.5px] font-semibold uppercase tracking-[0.22em] text-[#A97C2F]"
          style={{ fontFamily:"Inter,sans-serif" }}>{t.category}</p>
       <p className="font-['DM_Serif_Display'] flex-1 text-[16px] italic leading-[1.8] text-[#1A1209]/75">
@@ -92,7 +90,7 @@ const Carousel = () => {
 };
 
 const Testimonials = () => (
-  <section id="testimonials" className="overflow-hidden bg-[#FAFAF7] py-20 lg:py-28">
+  <section id="testimonials" className="overflow-hidden bg-white py-20 lg:py-28">
     <div className="mx-auto max-w-7xl px-5 sm:px-8 lg:px-12">
       <div className="mb-14 grid grid-cols-1 gap-8 lg:grid-cols-2 lg:items-end">
         <div>

@@ -18,7 +18,7 @@ const Check = () => (
 );
 
 const About = () => (
-  <section id="about" className="overflow-hidden bg-[#FAFAF7] px-5 py-20 sm:px-8 lg:py-28 lg:px-12">
+  <section id="about" className="overflow-hidden bg-[#FFFFFF] px-5 py-20 sm:px-8 lg:py-28 lg:px-12">
     <div className="mx-auto max-w-7xl">
       <div className="grid grid-cols-1 items-center gap-14 lg:grid-cols-2 lg:gap-20">
 
@@ -55,7 +55,7 @@ const About = () => (
               </div>
             ))}
           </div>
-          
+
           <a href="#contact"
              className="inline-flex items-center border border-[#A97C2F] px-7 py-3 text-[11px] font-semibold uppercase tracking-[0.18em] text-[#A97C2F] transition-all hover:bg-[#A97C2F] hover:text-white"
              style={{ fontFamily:"Inter,sans-serif" }}>
