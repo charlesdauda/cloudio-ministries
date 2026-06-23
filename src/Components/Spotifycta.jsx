@@ -81,7 +81,7 @@ const SpotifyCTA = () => {
               className="mt-4 max-w-xs text-[13px] leading-[1.8]"
               style={{ color: "rgba(255,255,255,0.55)", fontFamily: "Inter,sans-serif" }}
             >
-              Powerful teachings. Revealing messages. Transforming lives — available anytime, anywhere.
+              Powerful teachings. Revealing messages. Transforming lives available anytime, anywhere.
             </p>
 
             <div className="mt-5 h-px w-8" style={{ background: "#A97C2F" }} />
@@ -108,7 +108,7 @@ const SpotifyCTA = () => {
             </a>
 
             <div className="mt-8 mb-6 h-px w-full" style={{ background: "rgba(255,255,255,0.08)" }} />
-            
+
             <div className="flex flex-wrap gap-x-7 gap-y-4">
               {features.map((f) => (
                 <div key={f.label} className="flex items-center gap-2.5">
