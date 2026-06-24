@@ -1,21 +1,19 @@
 import { MapPin, Clock, Calendar } from "lucide-react";
-import sundayFlyer from "../assets/Images/wordalive.png";
-import fridayFlyer from "../assets/Images/tarry.png";
 
 const services = [
   {
     day:   "Sunday",
     name:  "Sunday Worship Service",
     time:  "7:30 AM – 10:00 AM",
-    flyer: sundayFlyer,
     icon:  <Calendar size={15} strokeWidth={1.5} />,
+    desc:  "Begin your week in the presence of God. Expect powerful worship, revelatory teaching, and a move of the Holy Spirit.",
   },
   {
     day:   "Friday",
     name:  "Friday Night Power Service",
     time:  "6:00 PM – 8:00 PM",
-    flyer: fridayFlyer,
     icon:  <Clock size={15} strokeWidth={1.5} />,
+    desc:  "End your week in fire. Friday nights are marked by prophetic ministry, intercession, and supernatural encounters.",
   },
 ];
 
@@ -41,55 +39,45 @@ const ChurchSection = () => (
         </div>
       </div>
 
-      {/* Cards + Location in one row on desktop */}
+      {/* Cards */}
       <div className="grid grid-cols-1 gap-5 lg:grid-cols-3">
 
         {/* Service Cards */}
         {services.map((s) => (
           <div key={s.day}
-               className="group border border-[#E8E3DA] overflow-hidden hover:shadow-[0_4px_20px_rgba(0,0,0,0.07)] transition-all duration-300">
-
-            {/* Flyer — full natural height, nothing cropped */}
-            <div className="overflow-hidden bg-[#F5F0E8]">
-              <img
-                src={s.flyer}
-                alt={s.name}
-                className="w-full h-auto object-contain transition-transform duration-700 group-hover:scale-105"
-              />
+               className="border border-[#E8E3DA] p-7 hover:shadow-[0_4px_20px_rgba(0,0,0,0.07)] transition-all duration-300">
+            <div className="mb-5 flex items-center justify-between">
+              <span className="text-[#A97C2F]">{s.icon}</span>
+              <span className="text-[10px] font-semibold uppercase tracking-[0.18em] text-[#A97C2F]/50">
+                {s.day}
+              </span>
             </div>
-
-            <div className="p-5">
-              <div className="mb-2 flex items-center justify-between">
-                <span className="text-[#A97C2F]">{s.icon}</span>
-                <span className="text-[10px] font-semibold uppercase tracking-[0.18em] text-[#A97C2F]/50">
-                  {s.day}
-                </span>
-              </div>
-              <h3 className="font-['DM_Serif_Display'] text-[18px] leading-snug text-[#1A1209] mb-1">
-                {s.name}
-              </h3>
-              <div className="flex items-center gap-1.5">
-                <Clock size={11} className="text-[#A97C2F]" strokeWidth={1.5} />
-                <span className="text-[11px] font-semibold text-[#A97C2F]">{s.time}</span>
-              </div>
+            <h3 className="font-['DM_Serif_Display'] text-[20px] leading-snug text-[#1A1209] mb-3">
+              {s.name}
+            </h3>
+            <div className="flex items-center gap-1.5 mb-4">
+              <Clock size={11} className="text-[#A97C2F]" strokeWidth={1.5} />
+              <span className="text-[11px] font-semibold text-[#A97C2F]">{s.time}</span>
             </div>
-
+            <div className="h-px w-8 bg-[#A97C2F]/30 mb-4" />
+            <p className="text-[13px] leading-[1.85] text-[#1A1209]/55">{s.desc}</p>
           </div>
         ))}
 
         {/* Location Card */}
-        <div className="border border-[#E8E3DA] p-6 flex flex-col justify-between gap-6">
+        <div className="border border-[#E8E3DA] p-7 flex flex-col justify-between gap-8">
           <div>
-            <div className="flex h-10 w-10 items-center justify-center border border-[#A97C2F]/30 text-[#A97C2F] mb-4">
+            <div className="flex h-10 w-10 items-center justify-center border border-[#A97C2F]/30 text-[#A97C2F] mb-5">
               <MapPin size={17} strokeWidth={1.5} />
             </div>
-            <p className="text-[10px] font-semibold uppercase tracking-[0.22em] text-[#A97C2F] mb-1">
+            <p className="text-[10px] font-semibold uppercase tracking-[0.22em] text-[#A97C2F] mb-2">
               Location
             </p>
-            <p className="font-['DM_Serif_Display'] text-[18px] text-[#1A1209] leading-snug mb-1">
+            <p className="font-['DM_Serif_Display'] text-[20px] text-[#1A1209] leading-snug mb-1">
               Mystery Embassy International
             </p>
-            <p className="text-[13px] text-[#1A1209]/45">
+            <div className="h-px w-8 bg-[#A97C2F]/30 my-4" />
+            <p className="text-[13px] text-[#1A1209]/45 leading-relaxed">
               Weija Taptoe, Accra — Ghana
             </p>
           </div>
