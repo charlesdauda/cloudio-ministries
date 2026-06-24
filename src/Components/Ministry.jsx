@@ -18,19 +18,19 @@ const pillars = [
 ];
 
 const bannerLinks = [
-  { icon:<BookOpen size={22} strokeWidth={1.4}/>, label:"Watch\nSermons",    href:"#sermons" },
-  { icon:<Users    size={22} strokeWidth={1.4}/>, label:"Follow\nUs",         href:"#events"  },
+  { icon:<BookOpen size={22} strokeWidth={1.4}/>, label:"Watch\nSermons",    href:"/sermons" },
+  { icon:<Users    size={22} strokeWidth={1.4}/>, label:"Follow\nUs",         href:"/events"  },
   { icon:(
     <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.4" className="h-5.5 w-5.5">
       <path d="M3 18v-6a9 9 0 0 1 18 0v6" strokeLinecap="round"/>
       <path d="M21 19a2 2 0 0 1-2 2h-1a2 2 0 0 1-2-2v-3a2 2 0 0 1 2-2h3z"/>
       <path d="M3 19a2 2 0 0 0 2 2h1a2 2 0 0 0 2-2v-3a2 2 0 0 0-2-2H3z"/>
-    </svg>), label:"Listen to\nSermons", href:"#sermons" },
+    </svg>), label:"Listen to\nSermons", href:"/sermons" },
   { icon:(
     <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.4" className="h-5.5 w-5.5">
       <rect x="3" y="4" width="18" height="18" rx="2"/><line x1="16" y1="2" x2="16" y2="6"/>
       <line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/>
-    </svg>), label:"Attend an\nEvent", href:"#events" },
+    </svg>), label:"Attend an\nEvent", href:"/events" },
 ];
 
 const PillarCard = ({ p }) => (
@@ -49,9 +49,9 @@ const PillarCard = ({ p }) => (
         {p.title}
       </h3>
       <p className="mb-6 text-[13px] leading-[1.85] text-[#1A1209]/55" style={{ fontFamily:"Inter,sans-serif" }}>{p.body}</p>
-      <a href="#about" className="inline-flex items-center gap-1.5 text-[11px] font-semibold uppercase tracking-[0.14em] text-[#A97C2F] transition-all group-hover:gap-3"
+      <a href="/ministry" className="inline-flex items-center gap-1.5 text-[11px] font-semibold uppercase tracking-[0.14em] text-[#A97C2F] transition-all group-hover:gap-3"
          style={{ fontFamily:"Inter,sans-serif" }}>
-        Learn More <ArrowRight size={12} />
+        Read More <ArrowRight size={12} />
       </a>
     </div>
   </div>

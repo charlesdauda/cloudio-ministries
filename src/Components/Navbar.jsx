@@ -7,9 +7,9 @@ const navLinks = [
   { name: "Home",     href: "/",        type: "route" },
   { name: "About",    href: "/about",   type: "route" },
   { name: "Ministry", href: "/ministry",type: "route" },
-  { name: "Sermons",  href: "#sermons", type: "hash"  },
-  { name: "Events",   href: "#events",  type: "hash"  },
-  { name: "Contact",  href: "#contact", type: "hash"  },
+  { name: "Sermons",  href: "/sermons", type: "route"  },
+  { name: "Events",   href: "/events",  type: "route"  },
+  { name: "Contact",  href: "/contact", type: "route"  },
 ];
 
 const Navbar = () => {

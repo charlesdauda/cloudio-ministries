@@ -39,10 +39,14 @@ const About = () => (
 
           <p className="mb-9 max-w-lg text-[14px] leading-[1.9] text-[#1A1209]/58"
              style={{ fontFamily:"Inter,sans-serif" }}>
-            Apostle Dr Cloudio is a passionate preacher, teacher, and visionary leader
-            with a heart to see the Gospel of Yeshuah transform lives and nations. With
-            a deep commitment to the Word, he has ministered across the globe equipping
-            believers and igniting revival everywhere he goes.
+              Apostle Dr. Cloudio Baffour Tetteh is a renowned minister of the Gospel of the Kingdom of God, 
+              a Revelator and a Theologian. He has two degrees in the study of Theology and a 
+              Doctorate degree in Apologetics. He is the human founder and General Overseer 
+              of the Mystery Embassy International.
+              His mission on earth is to restore destinies as he carries the grace 
+              and Mantle of Moses. He is an Apostolic Priest and well vested with the 
+              Power of the Holy Spirit, with the ability to flow in all dimensions 
+              of the five-fold ministries.
           </p>
 
           {/* Checklist */}
@@ -56,7 +60,7 @@ const About = () => (
             ))}
           </div>
 
-          <a href="#contact"
+          <a href="/about"
              className="inline-flex items-center border border-[#A97C2F] px-7 py-3 text-[11px] font-semibold uppercase tracking-[0.18em] text-[#A97C2F] transition-all hover:bg-[#A97C2F] hover:text-white"
              style={{ fontFamily:"Inter,sans-serif" }}>
             Read More
