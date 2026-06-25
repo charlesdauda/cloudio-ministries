@@ -12,7 +12,7 @@ const MinistryPage = () => {
   return (
     <main>
       <PageHeader
-        title="Our Ministry"
+        title="Ministry"
         crumbs={[
           { label: "Home", href: "/" },
           { label: "Ministry" },

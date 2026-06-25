@@ -9,20 +9,20 @@ import img6 from "../assets/Images/apshero3.png";
 const categories = ["All", "Teachings", "Prophecy", "Healing"];
 
 const images = [
-  { src: img1, category: "Teachings" },
-  { src: img2, category: "Prophecy"  },
-  { src: img3, category: "Healing"   },
-  { src: img4, category: "Teachings" },
-  { src: img5, category: "Prophecy"  },
-  { src: img6, category: "Healing"   },
+  { src: img1, category: "Teachings", label: "Apostolic Teaching Session"     },
+  { src: img2, category: "Prophecy",  label: "Prophetic Night — Accra"        },
+  { src: img3, category: "Healing",   label: "Healing & Deliverance Service"  },
+  { src: img4, category: "Teachings", label: "Kingdom Mysteries Conference"   },
+  { src: img5, category: "Prophecy",  label: "Word of the Lord — Lagos"       },
+  { src: img6, category: "Healing",   label: "Revival Crusade — Johannesburg" },
 ];
 
 const Gallery = () => {
-  const [active, setActive]   = useState("All");
-  const [page,   setPage]     = useState(0);
-  const dragX                 = useRef(null);
-  const autoRef               = useRef(null);
+  const [active,   setActive]   = useState("All");
+  const [page,     setPage]     = useState(0);
   const [isMobile, setIsMobile] = useState(false);
+  const dragX   = useRef(null);
+  const autoRef = useRef(null);
 
   const filtered = active === "All" ? images : images.filter((img) => img.category === active);
   const pages    = filtered.length;
@@ -34,23 +34,20 @@ const Gallery = () => {
     return () => window.removeEventListener("resize", check);
   }, []);
 
-  // Reset page when filter changes
   useEffect(() => { setPage(0); }, [active]);
 
   const startAuto = useCallback(() => {
     clearInterval(autoRef.current);
-    autoRef.current = setInterval(() => {
-      setPage((p) => (p + 1) % pages);
-    }, 3000);
+    autoRef.current = setInterval(() => setPage((p) => (p + 1) % pages), 3000);
   }, [pages]);
 
   useEffect(() => {
-    if (isMobile) { startAuto(); }
-    else { clearInterval(autoRef.current); }
+    if (isMobile) startAuto();
+    else clearInterval(autoRef.current);
     return () => clearInterval(autoRef.current);
   }, [isMobile, startAuto]);
 
-  const goTo   = (n) => { setPage((n + pages) % pages); startAuto(); };
+  const goTo    = (n) => { setPage((n + pages) % pages); startAuto(); };
   const onStart = (x) => { dragX.current = x; clearInterval(autoRef.current); };
   const onEnd   = (x) => {
     const d = (dragX.current ?? x) - x;
@@ -100,7 +97,7 @@ const Gallery = () => {
           ))}
         </div>
 
-        {/* Mobile — horizontal swipe carousel */}
+        {/* ── Mobile: swipe carousel ── */}
         <div className="block sm:hidden">
           <div
             className="overflow-hidden"
@@ -114,14 +111,23 @@ const Gallery = () => {
               style={{ transform: `translateX(-${page * 100}%)` }}
             >
               {filtered.map((img, i) => (
-                <div key={i} className="w-full shrink-0">
+                <div key={i} className="relative w-full shrink-0 overflow-hidden">
                   <img
                     src={img.src}
-                    alt={`${img.category} moment ${i + 1}`}
+                    alt={img.label}
                     draggable="false"
                     className="w-full object-cover select-none"
                     style={{ aspectRatio: "16/9" }}
                   />
+                  <div className="absolute inset-0 bg-gradient-to-t from-black/65 via-black/10 to-transparent" />
+                  <div className="absolute bottom-0 left-0 p-4">
+                    <span className="text-[9px] font-semibold uppercase tracking-[0.2em] text-[#A97C2F]">
+                      {img.category}
+                    </span>
+                    <p className="font-['DM_Serif_Display'] text-[15px] italic text-white leading-snug">
+                      {img.label}
+                    </p>
+                  </div>
                 </div>
               ))}
             </div>
@@ -141,16 +147,40 @@ const Gallery = () => {
           </div>
         </div>
 
-        {/* Desktop — 3 column grid */}
-        <div className="hidden sm:grid grid-cols-2 gap-3 lg:grid-cols-3">
+        {/* ── Desktop: bigger grid with overlays ── */}
+        <div className="hidden sm:grid grid-cols-2 gap-4 lg:grid-cols-3">
           {filtered.map((img, i) => (
-            <div key={i} className="group overflow-hidden">
+            <div key={i} className="group relative overflow-hidden">
+
               <img
                 src={img.src}
-                alt={`${img.category} moment ${i + 1}`}
+                alt={img.label}
                 className="w-full object-cover transition-transform duration-700 group-hover:scale-105"
-                style={{ aspectRatio: "16/9" }}
+                style={{ aspectRatio: "3/2" }}
               />
+
+              {/* Dark gradient — always on */}
+              <div className="absolute inset-0 bg-gradient-to-t from-black/65 via-black/10 to-transparent" />
+
+              {/* Gold top accent line on hover */}
+              <div className="absolute top-0 left-0 h-[3px] w-0 bg-[#A97C2F] transition-all duration-500 group-hover:w-full" />
+
+              {/* Label */}
+              <div className="absolute bottom-0 left-0 w-full p-5">
+                <span className="text-[9px] font-semibold uppercase tracking-[0.22em] text-[#A97C2F]">
+                  {img.category}
+                </span>
+                <p className="font-['DM_Serif_Display'] text-[17px] italic text-white leading-snug mt-0.5">
+                  {img.label}
+                </p>
+              </div>
+
+              {/* Subtle gold shine on hover */}
+              <div
+                className="absolute inset-0 opacity-0 transition-opacity duration-500 group-hover:opacity-100"
+                style={{ background: "linear-gradient(135deg, rgba(169,124,47,0.08) 0%, transparent 60%)" }}
+              />
+
             </div>
           ))}
         </div>
