@@ -8,7 +8,6 @@ const navLinks = [
   { name: "About",    href: "/about",   type: "route" },
   { name: "Ministry", href: "/ministry",type: "route" },
   { name: "Sermons", href: "/sermon", type: "route" },
-  { name: "Events",   href: "/events",  type: "route"  },
   { name: "Contact",  href: "/contact", type: "route"  },
 ];
 

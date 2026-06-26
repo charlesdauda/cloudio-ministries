@@ -119,7 +119,7 @@ const Gallery = () => {
                     className="w-full object-cover select-none"
                     style={{ aspectRatio: "16/9" }}
                   />
-                  <div className="absolute inset-0 bg-gradient-to-t from-black/65 via-black/10 to-transparent" />
+                  <div className="absolute inset-0 bg-linear-to-t from-black/65 via-black/10 to-transparent" />
                   <div className="absolute bottom-0 left-0 p-4">
                     <span className="text-[9px] font-semibold uppercase tracking-[0.2em] text-[#A97C2F]">
                       {img.category}
@@ -160,10 +160,10 @@ const Gallery = () => {
               />
 
               {/* Dark gradient — always on */}
-              <div className="absolute inset-0 bg-gradient-to-t from-black/65 via-black/10 to-transparent" />
+              <div className="absolute inset-0 bg-linear-to-t from-black/65 via-black/10 to-transparent" />
 
               {/* Gold top accent line on hover */}
-              <div className="absolute top-0 left-0 h-[3px] w-0 bg-[#A97C2F] transition-all duration-500 group-hover:w-full" />
+              <div className="absolute top-0 left-0 h-0.75 w-0 bg-[#A97C2F] transition-all duration-500 group-hover:w-full" />
 
               {/* Label */}
               <div className="absolute bottom-0 left-0 w-full p-5">
