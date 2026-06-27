@@ -41,15 +41,15 @@ const PillarCard = ({ p }) => (
     </div>
     <div className="px-7 py-8">
       <div className="mb-4 flex items-center gap-3">
-        <span className="text-[#A97C2F]">{p.icon}</span>
+        <span className="text-[#C8962B]">{p.icon}</span>
         <span className="h-px flex-1 bg-[#E8E3DA]" />
-        <span className="text-[11px] font-medium text-[#A97C2F]/50" style={{ fontFamily:"Inter,sans-serif" }}>{p.num}</span>
+        <span className="text-[11px] font-medium text-[#C8962B]/50" style={{ fontFamily:"Inter,sans-serif" }}>{p.num}</span>
       </div>
       <h3 className="font-['DM_Serif_Display'] mb-3 leading-snug text-[#1A1209]" style={{ fontSize:"21px" }}>
         {p.title}
       </h3>
       <p className="mb-6 text-[13px] leading-[1.85] text-[#1A1209]/55" style={{ fontFamily:"Inter,sans-serif" }}>{p.body}</p>
-      <a href="/ministry" className="inline-flex items-center gap-1.5 text-[11px] font-semibold uppercase tracking-[0.14em] text-[#A97C2F] transition-all group-hover:gap-3"
+      <a href="/ministry" className="inline-flex items-center gap-1.5 text-[11px] font-semibold uppercase tracking-[0.14em] text-[#C8962B] transition-all group-hover:gap-3"
          style={{ fontFamily:"Inter,sans-serif" }}>
         Read More <ArrowRight size={12} />
       </a>
@@ -103,7 +103,7 @@ const Carousel = () => {
       <div className="mt-10 flex justify-center gap-2">
         {Array.from({length:pages},(_,i)=>(
           <button key={i} onClick={()=>goTo(i)}
-                  className={`h-1.5 rounded-full transition-all duration-300 ${i===page?"w-8 bg-[#A97C2F]":"w-2 bg-[#A97C2F]/20"}`}/>
+                  className={`h-1.5 rounded-full transition-all duration-300 ${i===page?"w-8 bg-[#C8962B]":"w-2 bg-[#A97C2F]/20"}`}/>
         ))}
       </div>
     </div>
@@ -115,11 +115,11 @@ const Ministry = () => (
     <div className="mx-auto max-w-7xl px-5 pt-24 pb-14 sm:px-8 lg:px-12 lg:pt-28 lg:pb-16">
       <div className="grid grid-cols-1 gap-8 lg:grid-cols-2 lg:items-end">
         <div>
-          <p className="mb-4 text-[10px] font-semibold uppercase tracking-[0.26em] text-[#A97C2F]"
+          <p className="mb-4 text-[10px] font-semibold uppercase tracking-[0.26em] text-[#C8962B]"
              style={{ fontFamily:"Inter,sans-serif" }}>Ministry</p>
           <h2 className="font-['DM_Serif_Display'] leading-[1.08] text-[#1A1209]"
               style={{ fontSize:"clamp(34px, 4.5vw, 52px)" }}>
-            Expressions of<br /><em style={{ color:"#A97C2F" }}>the Mandate.</em>
+            Expressions of<br /><em style={{ color:"#C8962B" }}>the Mandate.</em>
           </h2>
         </div>
         <div className="lg:pb-2">
@@ -143,20 +143,20 @@ const Ministry = () => (
       <div className="relative mx-auto max-w-7xl px-5 py-14 sm:px-8 lg:px-12 lg:pl-80">
         <div className="flex flex-col gap-10 lg:flex-row lg:items-center lg:gap-16">
           <div className="lg:w-56 shrink-0">
-            <svg className="mb-3 h-7 w-7 text-[#A97C2F]" fill="currentColor" viewBox="0 0 24 24">
+            <svg className="mb-3 h-7 w-7 text-[#C8962B]" fill="currentColor" viewBox="0 0 24 24">
               <path d="M14.017 21v-7.391c0-5.704 3.731-9.57 8.983-10.609l.995 2.151c-2.432.917-3.995 3.638-3.995 5.849h4v10h-9.983zm-14.017 0v-7.391c0-5.704 3.748-9.57 9-10.609l.996 2.151c-2.433.917-3.996 3.638-3.996 5.849h3.983v10h-9.983z"/>
             </svg>
             <p className="font-['DM_Serif_Display'] text-[16px] italic leading-relaxed text-white/80">
               Go into all the world and preach the gospel to all creation."
             </p>
-            <p className="mt-3 text-[10px] font-semibold uppercase tracking-[0.2em] text-[#A97C2F]"
+            <p className="mt-3 text-[10px] font-semibold uppercase tracking-[0.2em] text-[#C8962B]"
                style={{ fontFamily:"Inter,sans-serif" }}>— Mark 16:15</p>
           </div>
           <div className="hidden h-24 w-px bg-white/8 lg:block" />
           <div className="grid grid-cols-2 gap-x-6 gap-y-8 sm:grid-cols-4 flex-1">
             {bannerLinks.map((item) => (
               <a key={item.label} href={item.href} className="group flex flex-col items-center gap-3 text-center">
-                <div className="flex h-12 w-12 items-center justify-center border border-[#A97C2F]/30 text-[#A97C2F] transition-all group-hover:bg-[#A97C2F]/15">
+                <div className="flex h-12 w-12 items-center justify-center border border-[#C8962B]/30 text-[#C8962B] transition-all group-hover:bg-[#C8962B]/15">
                   {item.icon}
                 </div>
                 <span className="whitespace-pre-line text-[10px] font-semibold uppercase tracking-[0.16em] leading-snug text-white/50 transition-colors group-hover:text-white/80"

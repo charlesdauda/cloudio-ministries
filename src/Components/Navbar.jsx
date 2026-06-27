@@ -30,18 +30,27 @@ const Navbar = () => {
 
   return (
     <header
-      className={`fixed top-0 left-0 right-0 z-50 bg-[#FFFFFF] transition-all duration-300 ${
+      className={`fixed top-0 left-0 right-0 z-50 bg-white transition-all duration-300 ${
         scrolled ? "shadow-[0_1px_20px_rgba(0,0,0,0.07)]" : "shadow-none"
       }`}
     >
-      <div className="relative mx-auto flex max-w-7xl items-center justify-between px-6 py-4 lg:px-10">
+      <div className="relative mx-auto flex max-w-7xl items-center justify-between px-6 py-3 lg:px-10">
 
+        {/* Logo */}
         <Link to="/" className="flex items-center gap-3">
-          <img src={logo} alt="Cloudio Ministries" className="h-9 w-9 object-contain lg:h-10 lg:w-10" />
+          <img
+            src={logo}
+            alt="Cloudio Ministries"
+            className="h-11 w-11 object-contain lg:h-13 lg:w-13"
+          />
           <span className="flex flex-col leading-tight">
-            <span className="font-['DM_Serif_Display'] text-[16px] italic text-[#1A1209]">Cloudio</span>
-            <span className="text-[9px] font-semibold tracking-[0.28em] text-[#A97C2F] uppercase"
-                  style={{ fontFamily: "Inter, sans-serif" }}>Ministries</span>
+            <span className="font-['DM_Serif_Display'] text-[18px] italic text-[#0A0A0A]">Cloudio</span>
+            <span
+              className="text-[9px] font-semibold tracking-[0.28em] text-[#C8962B] uppercase"
+              style={{ fontFamily: "Inter, sans-serif" }}
+            >
+              Ministries
+            </span>
           </span>
         </Link>
 
@@ -53,23 +62,21 @@ const Navbar = () => {
                 <Link
                   to={link.href}
                   onClick={() => setMobileOpen(false)}
-                  className={`relative pb-1 text-[12px] font-semibold uppercase tracking-[0.12em] transition-colors duration-200 ${
+                  className={`relative pb-1 font-['DM_Serif_Display'] text-[15px] italic transition-colors duration-200 ${
                     isActive(link)
-                      ? "text-[#1A1209]"
-                      : "text-[#1A1209]/85 hover:text-[#1A1209]"
+                      ? "text-[#0A0A0A]"
+                      : "text-[#0A0A0A]/60 hover:text-[#0A0A0A]"
                   }`}
-                  style={{ fontFamily: "Inter, sans-serif" }}
                 >
                   {link.name}
                   {isActive(link) && (
-                    <span className="absolute -bottom-0.5 left-0 h-[1.5px] w-full bg-[#A97C2F]" />
+                    <span className="absolute -bottom-0.5 left-0 h-[1.5px] w-full bg-[#C8962B]" />
                   )}
                 </Link>
               ) : (
                 <a
                   href={link.href}
-                  className="relative pb-1 text-[12px] font-semibold uppercase tracking-[0.12em] text-[#1A1209]/85 hover:text-[#1A1209] transition-colors duration-200"
-                  style={{ fontFamily: "Inter, sans-serif" }}
+                  className="relative pb-1 font-['DM_Serif_Display'] text-[15px] italic text-[#0A0A0A]/60 hover:text-[#0A0A0A] transition-colors duration-200"
                 >
                   {link.name}
                 </a>
@@ -78,14 +85,15 @@ const Navbar = () => {
           ))}
         </ul>
 
-        <button onClick={() => setMobileOpen((v) => !v)} className="text-[#1A1209] lg:hidden">
+        {/* Mobile toggle */}
+        <button onClick={() => setMobileOpen((v) => !v)} className="text-[#0A0A0A] lg:hidden">
           {mobileOpen ? <X size={22} /> : <Menu size={22} />}
         </button>
       </div>
 
       {/* Mobile menu */}
       {mobileOpen && (
-        <div className="border-t border-[#E8E3DA] bg-white px-6 pb-6 pt-4 lg:hidden">
+        <div className="border-t border-[#E5E5E5] bg-white px-6 pb-6 pt-4 lg:hidden">
           <ul className="flex flex-col gap-1">
             {navLinks.map((link) => (
               <li key={link.name}>
@@ -93,10 +101,9 @@ const Navbar = () => {
                   <Link
                     to={link.href}
                     onClick={() => setMobileOpen(false)}
-                    className={`block px-2 py-2.5 text-[13px] font-semibold uppercase tracking-[0.12em] ${
-                      isActive(link) ? "text-[#A97C2F]" : "text-[#1A1209]/85"
+                    className={`block px-2 py-2.5 font-['DM_Serif_Display'] text-[16px] italic ${
+                      isActive(link) ? "text-[#C8962B]" : "text-[#0A0A0A]/70"
                     }`}
-                    style={{ fontFamily: "Inter, sans-serif" }}
                   >
                     {link.name}
                   </Link>
@@ -104,8 +111,7 @@ const Navbar = () => {
                   <a
                     href={link.href}
                     onClick={() => setMobileOpen(false)}
-                    className="block px-2 py-2.5 text-[13px] font-semibold uppercase tracking-[0.12em] text-[#1A1209]/85"
-                    style={{ fontFamily: "Inter, sans-serif" }}
+                    className="block px-2 py-2.5 font-['DM_Serif_Display'] text-[16px] italic text-[#0A0A0A]/70"
                   >
                     {link.name}
                   </a>

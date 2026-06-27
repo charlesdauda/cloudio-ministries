@@ -15,7 +15,7 @@ const features = [
 
 const SpotifyCTA = () => {
   return (
-    <section className="relative overflow-hidden" style={{ background: "#0F0D0B" }}>
+    <section className="relative overflow-hidden" style={{ background: "#0A0A0A" }}>
       <div className="absolute inset-0 z-0">
         <div
           className="absolute inset-y-0 left-0 w-full lg:w-[52%]"
@@ -29,18 +29,18 @@ const SpotifyCTA = () => {
         <div
           className="absolute inset-y-0 left-0 hidden w-[52%] lg:block"
           style={{
-            background: "linear-gradient(to right, rgba(15,13,11,0.1) 0%, rgba(15,13,11,0.55) 60%, rgba(15,13,11,1) 100%)",
+            background: "linear-gradient(to right, rgba(10,10,10,0.1) 0%, rgba(10,10,10,0.55) 60%, rgba(10,10,10,1) 100%)",
           }}
         />
 
         <div
           className="absolute inset-0 lg:hidden"
-          style={{ background: "rgba(15,13,11,0.72)" }}
+          style={{ background: "rgba(10,10,10,0.72)" }}
         />
 
         <div
           className="pointer-events-none absolute -bottom-20 -left-20 h-72 w-72 rounded-full opacity-[0.07]"
-          style={{ background: "radial-gradient(circle, #A97C2F 0%, transparent 65%)" }}
+          style={{ background: "radial-gradient(circle, #C8962B 0%, transparent 65%)" }}
         />
 
         <div
@@ -61,7 +61,7 @@ const SpotifyCTA = () => {
               <SpotifyIcon className="h-5 w-5" color="#1DB954" />
               <span
                 className="text-[10px] font-semibold uppercase tracking-[0.26em]"
-                style={{ color: "#A97C2F", fontFamily: "Inter,sans-serif" }}
+                style={{ color: "#C8962B", fontFamily: "Inter,sans-serif" }}
               >
                 Now Streaming on Spotify
               </span>
@@ -73,7 +73,7 @@ const SpotifyCTA = () => {
             >
               Kingdom Truth.
               <br />
-              <em style={{ color: "#A97C2F", fontStyle: "italic" }}>Everywhere</em>{" "}
+              <em style={{ color: "#C8962B", fontStyle: "italic" }}>Everywhere</em>{" "}
               You Are.
             </h2>
 
@@ -84,14 +84,14 @@ const SpotifyCTA = () => {
               Powerful teachings. Revealing messages. Transforming lives available anytime, anywhere.
             </p>
 
-            <div className="mt-5 h-px w-8" style={{ background: "#A97C2F" }} />
+            <div className="mt-5 h-px w-8" style={{ background: "#C8962B" }} />
 
             <p
               className="mt-5 text-[12px]"
               style={{ color: "rgba(255,255,255,0.45)", fontFamily: "Inter,sans-serif" }}
             >
               Search on Spotify:{" "}
-              <span className="font-semibold" style={{ color: "#A97C2F" }}>
+              <span className="font-semibold" style={{ color: "#C8962B" }}>
                 Dr. Cloudio (PhD)
               </span>
             </p>
@@ -114,7 +114,7 @@ const SpotifyCTA = () => {
                 <div key={f.label} className="flex items-center gap-2.5">
                   <div
                     className="flex h-9 w-9 items-center justify-center border transition-all"
-                    style={{ borderColor: "rgba(169,124,47,0.3)", color: "#A97C2F" }}
+                    style={{ borderColor: "rgba(200,150,43,0.3)", color: "#C8962B" }}
                   >
                     {f.icon}
                   </div>

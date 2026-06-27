@@ -23,14 +23,14 @@ const ChurchSection = () => (
 
       {/* Header */}
       <div className="mb-10">
-        <p className="mb-3 text-[10px] font-semibold uppercase tracking-[0.26em] text-[#A97C2F]">
+        <p className="mb-3 text-[10px] font-semibold uppercase tracking-[0.26em] text-[#C8962B]">
           The Local Church
         </p>
         <div className="flex flex-col gap-4 lg:flex-row lg:items-end lg:justify-between">
           <h2 className="font-['DM_Serif_Display'] leading-[1.08] text-[#1A1209]"
               style={{ fontSize: "clamp(28px, 3.5vw, 42px)" }}>
             Find a Home.{" "}
-            <em style={{ color: "#A97C2F" }}>Join the House.</em>
+            <em style={{ color: "#C8962B" }}>Join the House.</em>
           </h2>
           <p className="max-w-sm text-[13px] leading-[1.8] text-[#1A1209]/50 lg:text-right">
             Mystery Embassy International — Weija Taptoe, Accra.
@@ -76,7 +76,7 @@ const ChurchSection = () => (
             <p className="font-['DM_Serif_Display'] text-[20px] text-[#1A1209] leading-snug mb-1">
               Mystery Embassy International
             </p>
-            <div className="h-px w-8 bg-[#A97C2F]/30 my-4" />
+            <div className="h-px w-8 bg-[#C8962B]/30 my-4" />
             <p className="text-[13px] text-[#1A1209]/45 leading-relaxed">
               Weija Taptoe, Accra — Ghana
             </p>
@@ -86,7 +86,7 @@ const ChurchSection = () => (
               href="https://maps.google.com"
               target="_blank"
               rel="noopener noreferrer"
-              className="inline-flex items-center justify-center gap-2 border border-[#A97C2F] px-5 py-2.5 text-[11px] font-semibold uppercase tracking-[0.14em] text-[#A97C2F] transition-all hover:bg-[#A97C2F] hover:text-white"
+              className="inline-flex items-center justify-center gap-2 border border-[#C8962B] px-5 py-2.5 text-[11px] font-semibold uppercase tracking-[0.14em] text-[#C8962B] transition-all hover:bg-[#C8962B] hover:text-white"
             >
               <MapPin size={12} strokeWidth={1.5} /> Get Directions
             </a>

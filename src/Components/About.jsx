@@ -24,7 +24,7 @@ const About = () => (
 
         {/* Text */}
         <div className="order-2 lg:order-1">
-          <p className="mb-5 text-[10px] font-semibold uppercase tracking-[0.26em] text-[#A97C2F]"
+          <p className="mb-5 text-[10px] font-semibold uppercase tracking-[0.26em] text-[#C8962B]"
              style={{ fontFamily:"Inter,sans-serif" }}>
             About Dr Cloudio
           </p>
@@ -32,10 +32,10 @@ const About = () => (
           <h2 className="font-['DM_Serif_Display'] mb-6 leading-[1.1] text-[#1A1209]"
               style={{ fontSize:"clamp(36px, 4.5vw, 54px)" }}>
             The Man Behind<br />
-            <em style={{ color:"#A97C2F" }}>The Mandate.</em>
+            <em style={{ color:"#C8962B" }}>The Mandate.</em>
           </h2>
 
-          <div className="mb-7 h-px w-10 bg-[#A97C2F]" />
+          <div className="mb-7 h-px w-10 bg-[#C8962B]" />
 
           <p className="mb-9 max-w-lg text-[14px] leading-[1.9] text-[#1A1209]/58"
              style={{ fontFamily:"Inter,sans-serif" }}>
@@ -59,17 +59,11 @@ const About = () => (
               </div>
             ))}
           </div>
-
-          <a href="/about"
-             className="inline-flex items-center border border-[#A97C2F] px-7 py-3 text-[11px] font-semibold uppercase tracking-[0.18em] text-[#A97C2F] transition-all hover:bg-[#A97C2F] hover:text-white"
-             style={{ fontFamily:"Inter,sans-serif" }}>
-            Read More
-          </a>
         </div>
 
         {/* Image */}
         <div className="relative order-1 lg:order-2">
-          <div className="absolute -bottom-4 -right-4 h-full w-full border border-[#A97C2F]/20" />
+          <div className="absolute -bottom-4 -right-4 h-full w-full border border-[#C8962B]/20" />
           <div className="relative z-10 overflow-hidden">
             <img src={pastorImage} alt="Apostle Dr Cloudio"
                  className="w-full object-cover object-top" style={{ aspectRatio:"3/4" }} />

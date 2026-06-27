@@ -14,21 +14,21 @@ const initials = (name) => name.split(" ").map((n) => n[0]).slice(0, 2).join("")
 
 const TestiCard = ({ t }) => (
   <div className="flex h-full flex-col bg-white border border-[#E8E3DA] shadow-[0_1px_8px_rgba(0,0,0,0.04)] hover:shadow-[0_6px_24px_rgba(0,0,0,0.08)] hover:-translate-y-0.5 transition-all duration-300 p-7 select-none">
-      <Quote size={30} strokeWidth={0} fill="#A97C2F" className="mb-4" />
-      <p className="mb-4 text-[9.5px] font-semibold uppercase tracking-[0.22em] text-[#A97C2F]"
+      <Quote size={30} strokeWidth={0} fill="#C8962B" className="mb-4" />
+      <p className="mb-4 text-[9.5px] font-semibold uppercase tracking-[0.22em] text-[#C8962B]"
          style={{ fontFamily:"Inter,sans-serif" }}>{t.category}</p>
       <p className="font-['DM_Serif_Display'] flex-1 text-[16px] italic leading-[1.8] text-[#1A1209]/75">
         "{t.quote}"
       </p>
       <div className="my-6 h-px bg-[#E8E3DA]" />
       <div className="flex items-center gap-3">
-        <div className="flex h-9 w-9 shrink-0 items-center justify-center border border-[#A97C2F]/40 font-['DM_Serif_Display'] text-[13px] italic text-[#A97C2F]">
+        <div className="flex h-9 w-9 shrink-0 items-center justify-center border border-[#C8962B]/40 font-['DM_Serif_Display'] text-[13px] italic text-[#C8962B]">
           {initials(t.name)}
         </div>
         <div>
           <p className="text-[13px] font-semibold text-[#1A1209]" style={{ fontFamily:"Inter,sans-serif" }}>{t.name}</p>
           <div className="mt-0.5 flex items-center gap-1">
-            <MapPin size={9} className="text-[#A97C2F] shrink-0" />
+            <MapPin size={9} className="text-[#C8962B] shrink-0" />
             <p className="text-[11px] text-[#1A1209]/40" style={{ fontFamily:"Inter,sans-serif" }}>{t.location}</p>
           </div>
         </div>
@@ -82,7 +82,7 @@ const Carousel = () => {
       <div className="mt-10 flex justify-center gap-2">
         {Array.from({length:pages},(_,i)=>(
           <button key={i} onClick={()=>goTo(i)}
-                  className={`h-1.5 rounded-full transition-all duration-300 ${i===page?"w-8 bg-[#A97C2F]":"w-2 bg-[#A97C2F]/20"}`}/>
+                  className={`h-1.5 rounded-full transition-all duration-300 ${i===page?"w-8 bg-[#C8962B]":"w-2 bg-[#C8962B]/20"}`}/>
         ))}
       </div>
     </div>
@@ -95,13 +95,13 @@ const Testimonials = () => (
       <div className="mb-14 grid grid-cols-1 gap-8 lg:grid-cols-2 lg:items-end">
         <div>
           <div className="mb-5 flex items-center gap-3">
-            <span className="h-px w-7 bg-[#A97C2F]" />
-            <p className="text-[10px] font-semibold uppercase tracking-[0.26em] text-[#A97C2F]"
-               style={{ fontFamily:"Inter,sans-serif" }}>Testimonials</p>
+            <span className="h-px w-7 bg-[#C8962B]" />
+            <p className="text-[10px] font-semibold uppercase tracking-[0.26em] text-[#C8962B]"
+               style={{ fontFamily:"Inter,sans-serif" }}>Testimonies</p>
           </div>
           <h2 className="font-['DM_Serif_Display'] leading-[1.08] text-[#1A1209]"
               style={{ fontSize:"clamp(30px, 4vw, 48px)" }}>
-            Lives Changed.<br /><em style={{ color:"#A97C2F" }}>Stories Told.</em>
+            Lives Changed.<br /><em style={{ color:"#C8962B" }}>Stories Told.</em>
           </h2>
         </div>
         <div className="lg:pb-2">

@@ -1,7 +1,6 @@
 import { useEffect } from "react";
 import PageHeader from "../Components/PageHeader";
 import Ministry from "../Components/Ministry";
-import Gallery from "../Components/Gallery";
 import ChurchSection from "../Components/ChurchSection";
 
 const MinistryPage = () => {
@@ -20,7 +19,6 @@ const MinistryPage = () => {
       />
       <Ministry />
       <ChurchSection />
-      <Gallery />
     </main>
   );
 };

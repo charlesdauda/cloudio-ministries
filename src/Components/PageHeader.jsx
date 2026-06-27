@@ -52,7 +52,7 @@ const PageHeader = ({ title, crumbs = [] }) => (
         <div className="flex items-center gap-2" style={{ fontFamily: "Inter, sans-serif" }}>
           {crumbs.map((crumb, i) => (
             <span key={crumb.label} className="flex items-center gap-2">
-              {i > 0 && <ChevronRight size={13} className="text-[#A97C2F]" strokeWidth={2.5} />}
+              {i > 0 && <ChevronRight size={13} className="text-[#C8962B]" strokeWidth={2.5} />}
               {crumb.href ? (
                 <a href={crumb.href}
                    className="text-[13px] text-[#1A1209]/55 hover:text-[#1A1209] transition-colors">

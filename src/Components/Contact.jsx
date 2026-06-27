@@ -150,10 +150,10 @@ function MobileCarousel({ children, autoInterval = 4000 }) {
 ───────────────────────────────────────────── */
 const SectionHeading = ({ eyebrow, title }) => (
   <div className="mb-10">
-    <p className="text-[10px] font-semibold uppercase tracking-[0.26em] text-[#A97C2F] mb-2">
+    <p className="text-[10px] font-semibold uppercase tracking-[0.26em] text-[#C8962B] mb-2">
       {eyebrow}
     </p>
-    <div className="h-px w-10 bg-[#A97C2F] mb-6" />
+    <div className="h-px w-10 bg-[#C8962B] mb-6" />
     {title && (
       <h2
         className="font-['DM_Serif_Display'] text-[#1A1209]"
@@ -172,20 +172,20 @@ function ContactCard({ c }) {
   return (
     <a
       href={c.href}
-      className="group flex flex-col gap-4 border border-[#E8E3DA] p-6 transition-all duration-300 hover:border-[#A97C2F] hover:shadow-[0_6px_24px_rgba(169,124,47,0.08)]"
+      className="group flex flex-col gap-4 border border-[#E8E3DA] p-6 transition-all duration-300 hover:border-[#C8962B] hover:shadow-[0_6px_24px_rgba(200,150,43,0.08)]"
     >
-      <div className="flex h-10 w-10 items-center justify-center border border-[#E8E3DA] text-[#A97C2F] transition-colors duration-300 group-hover:border-[#A97C2F]">
+      <div className="flex h-10 w-10 items-center justify-center border border-[#E8E3DA] text-[#C8962B] transition-colors duration-300 group-hover:border-[#C8962B]">
         {c.icon}
       </div>
       <div>
-        <p className="text-[10px] font-semibold uppercase tracking-[0.2em] text-[#A97C2F] mb-1">
+        <p className="text-[10px] font-semibold uppercase tracking-[0.2em] text-[#C8962B] mb-1">
           {c.label}
         </p>
         <p className="text-sm text-[#1A1209] font-medium leading-[1.6] break-all">
           {c.value}
         </p>
       </div>
-      <span className="mt-auto text-[11px] font-semibold uppercase tracking-[0.14em] text-[#1A1209]/25 transition-colors duration-300 group-hover:text-[#A97C2F]">
+      <span className="mt-auto text-[11px] font-semibold uppercase tracking-[0.14em] text-[#1A1209]/25 transition-colors duration-300 group-hover:text-[#C8962B]">
         Contact →
       </span>
     </a>
@@ -198,7 +198,7 @@ function SocialCard({ s }) {
       href={s.href}
       target="_blank"
       rel="noopener noreferrer"
-      className="group flex items-center gap-5 border border-[#E8E3DA] p-6 transition-all duration-300 hover:border-[#A97C2F] hover:shadow-[0_6px_24px_rgba(169,124,47,0.08)]"
+      className="group flex items-center gap-5 border border-[#E8E3DA] p-6 transition-all duration-300 hover:border-[#C8962B] hover:shadow-[0_6px_24px_rgba(200,150,43,0.08)]"
     >
       <div
         className="flex h-12 w-12 shrink-0 items-center justify-center border border-[#E8E3DA] transition-colors duration-300 group-hover:border-current"
@@ -207,13 +207,13 @@ function SocialCard({ s }) {
         {s.icon}
       </div>
       <div className="flex-1 min-w-0">
-        <p className="text-[10px] font-semibold uppercase tracking-[0.2em] text-[#A97C2F] mb-0.5">
+        <p className="text-[10px] font-semibold uppercase tracking-[0.2em] text-[#C8962B] mb-0.5">
           {s.label}
         </p>
         <p className="text-sm font-semibold text-[#1A1209] truncate">{s.handle}</p>
         <p className="text-xs text-[#1A1209]/40 mt-0.5">{s.desc}</p>
       </div>
-      <span className="shrink-0 text-[#1A1209]/15 transition-all duration-300 group-hover:text-[#A97C2F] group-hover:translate-x-1">
+      <span className="shrink-0 text-[#1A1209]/15 transition-all duration-300 group-hover:text-[#C8962B] group-hover:translate-x-1">
         →
       </span>
     </a>
@@ -230,8 +230,8 @@ const Contact = () => (
     <div className="relative border-b border-[#E8E3DA]">
       <div className="mx-auto max-w-7xl px-5 pt-24 pb-20 sm:px-8 lg:px-12">
         <div className="flex items-center gap-3 mb-8">
-          <FaGlobe size={11} className="text-[#A97C2F]" />
-          <p className="text-[10px] font-semibold uppercase tracking-[0.3em] text-[#A97C2F]">
+          <FaGlobe size={11} className="text-[#C8962B]" />
+          <p className="text-[10px] font-semibold uppercase tracking-[0.3em] text-[#C8962B]">
             International Ministry
           </p>
         </div>
@@ -243,7 +243,7 @@ const Contact = () => (
               style={{ fontSize: "clamp(36px, 5vw, 62px)" }}
             >
               Connect With<br />
-              <em style={{ color: "#A97C2F" }}>The Ministry.</em>
+              <em style={{ color: "#C8962B" }}>The Ministry.</em>
             </h1>
             <p className="text-sm leading-loose text-[#1A1209]/50 max-w-sm">
               Dr Cloudio's apostolic ministry spans continents. Whether you are reaching

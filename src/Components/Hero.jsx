@@ -135,9 +135,9 @@ const Hero = () => {
 
           {/* Eyebrow */}
           <div className="mb-4 flex items-center justify-center gap-3 sm:justify-start">
-            <span className="h-px w-6 shrink-0 bg-[#A97C2F]" />
+            <span className="h-px w-6 shrink-0 bg-[#C8962B]" />
             <p
-              className="text-[9.5px] font-semibold uppercase tracking-[0.2em] text-[#A97C2F]"
+              className="text-[9.5px] font-semibold uppercase tracking-[0.2em] text-[#C8962B]"
               style={{ fontFamily: "Inter,sans-serif" }}
             >
               {current.eyebrow}
@@ -152,7 +152,7 @@ const Hero = () => {
             <span className="block">{current.line1}</span>
             <span className="block">
               {current.line2Plain}
-              <em style={{ color: "#A97C2F", fontStyle: "italic" }}>{current.line2Gold}</em>
+              <em style={{ color: "#C8962B", fontStyle: "italic" }}>{current.line2Gold}</em>
             </span>
           </h1>
 
@@ -207,7 +207,7 @@ const Hero = () => {
           "Because it has been given unto you to know the mysteries of the kingdom of heaven."
         </p>
         <p
-          className="mt-2 text-[10px] font-semibold uppercase tracking-[0.18em] text-[#A97C2F]"
+          className="mt-2 text-[10px] font-semibold uppercase tracking-[0.18em] text-[#C8962B]"
           style={{ fontFamily: "Inter,sans-serif" }}
         >
           — Matthew 13:11

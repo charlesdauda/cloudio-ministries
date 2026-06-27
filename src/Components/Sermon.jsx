@@ -78,8 +78,8 @@ const Carousel = ({ items, renderCard, autoPlay = true, interval = 4000 }) => {
 /* ── Section heading: label + short gold rule, no icon, no full-width line ── */
 const SectionHeading = ({ label }) => (
   <div className="mb-10">
-    <p className="text-[10px] font-semibold uppercase tracking-[0.26em] text-[#A97C2F] mb-2">{label}</p>
-    <div className="h-px w-10 bg-[#A97C2F]" />
+    <p className="text-[10px] font-semibold uppercase tracking-[0.26em] text-[#C8962B] mb-2">{label}</p>
+    <div className="h-px w-10 bg-[#C8962B]" />
   </div>
 );
 
@@ -90,11 +90,11 @@ const Sermons = () => (
     <div className="mx-auto max-w-7xl px-5 pt-20 pb-10 sm:px-8 lg:px-12">
       <div className="grid grid-cols-1 gap-8 lg:grid-cols-2 lg:items-end">
         <div>
-          <p className="mb-4 text-[10px] font-semibold uppercase tracking-[0.26em] text-[#A97C2F]">The Word</p>
+          <p className="mb-4 text-[10px] font-semibold uppercase tracking-[0.26em] text-[#C8962B]">The Word</p>
           <h2 className="font-['DM_Serif_Display'] leading-[1.08] text-[#1A1209]"
               style={{ fontSize: "clamp(32px, 4vw, 48px)" }}>
             Sound Doctrine.<br />
-            <em style={{ color: "#A97C2F" }}>Timeless Truth.</em>
+            <em style={{ color: "#C8962B" }}>Timeless Truth.</em>
           </h2>
         </div>
         <div className="lg:pl-12">
@@ -164,8 +164,8 @@ const Sermons = () => (
           </p>
 
           {/* Schedule */}
-          <div className="border-l-2 border-[#A97C2F] pl-4">
-            <p className="text-[10px] font-semibold uppercase tracking-[0.22em] text-[#A97C2F] mb-2">
+          <div className="border-l-2 border-[#C8962B] pl-4">
+            <p className="text-[10px] font-semibold uppercase tracking-[0.22em] text-[#C8962B] mb-2">
               Live Schedule
             </p>
             {/* ── Replace with actual day, time & timezone ── */}
@@ -208,13 +208,13 @@ const Sermons = () => (
               <FaTelegram size={24} />
             </div>
             <div>
-              <p className="text-[10px] font-semibold uppercase tracking-[0.26em] text-[#A97C2F] mb-2">
+              <p className="text-[10px] font-semibold uppercase tracking-[0.26em] text-[#C8962B] mb-2">
                 Telegram Channel
               </p>
               <h3 className="font-['DM_Serif_Display'] text-[#1A1209] mb-2"
                   style={{ fontSize: "clamp(18px, 2vw, 24px)" }}>
                 Hundreds of Messages<br />
-                <em style={{ color: "#A97C2F" }}>Waiting for You.</em>
+                <em style={{ color: "#C8962B" }}>Waiting for You.</em>
               </h3>
               {/* ── Replace with your own text ── */}
               <p className="max-w-md text-sm leading-[1.9] text-[#1A1209]/55">

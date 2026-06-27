@@ -29,31 +29,30 @@ const socials = [
 ];
 
 const Footer = () => (
-  <footer className="bg-[#0F0D0B]" style={{ fontFamily: "Inter, sans-serif" }}>
+  <footer className="bg-[#0A0A0A]" style={{ fontFamily: "Inter, sans-serif" }}>
 
     {/* ── Newsletter Banner ── */}
     <div className="border-b border-white/8">
       <div className="mx-auto max-w-7xl px-5 py-12 sm:px-8 lg:px-12">
         <div className="flex flex-col gap-6 lg:flex-row lg:items-center lg:justify-between">
           <div>
-            <p className="text-[10px] font-semibold uppercase tracking-[0.26em] text-[#A97C2F] mb-2">
+            <p className="text-[10px] font-semibold uppercase tracking-[0.26em] text-[#C8962B] mb-2">
               Stay Connected
             </p>
             <h3 className="font-['DM_Serif_Display'] text-white leading-snug"
                 style={{ fontSize: "clamp(22px, 3vw, 30px)" }}>
               Receive Prophetic Updates &{" "}
-              <em style={{ color: "#A97C2F" }}>Kingdom Insights.</em>
+              <em style={{ color: "#C8962B" }}>Kingdom Insights.</em>
             </h3>
           </div>
 
-          {/* Form — always inline */}
           <div className="flex w-full min-w-0 max-w-md lg:ml-auto">
             <input
               type="email"
               placeholder="Your email address"
-              className="min-w-0 flex-1 border border-white/10 bg-white/5 px-4 py-3 text-[13px] text-white placeholder:text-white/30 outline-none focus:border-[#A97C2F]/60 transition-colors"
+              className="min-w-0 flex-1 border border-white/10 bg-white/5 px-4 py-3 text-[13px] text-white placeholder:text-white/30 outline-none focus:border-[#C8962B]/60 transition-colors"
             />
-            <button className="shrink-0 bg-[#A97C2F] px-5 py-3 text-[11px] font-semibold uppercase tracking-[0.14em] text-white transition-opacity hover:opacity-90 whitespace-nowrap">
+            <button className="shrink-0 bg-[#C8962B] px-5 py-3 text-[11px] font-semibold uppercase tracking-[0.14em] text-white transition-opacity hover:opacity-90 whitespace-nowrap">
               Subscribe
             </button>
           </div>
@@ -69,7 +68,7 @@ const Footer = () => (
         <div>
           <div className="mb-6">
             <p className="font-['DM_Serif_Display'] text-[22px] text-white leading-none">Cloudio</p>
-            <p className="text-[9px] uppercase tracking-[0.22em] text-[#A97C2F] mt-1">Ministries</p>
+            <p className="text-[9px] uppercase tracking-[0.22em] text-[#C8962B] mt-1">Ministries</p>
           </div>
           <p className="text-[13px] leading-[1.85] text-white/40 max-w-65">
             A global apostolic ministry committed to revealing Kingdom truths, transforming
@@ -80,7 +79,7 @@ const Footer = () => (
         {/* Link Columns */}
         {Object.entries(footerLinks).map(([heading, links]) => (
           <div key={heading}>
-            <p className="mb-6 text-[9.5px] font-semibold uppercase tracking-[0.24em] text-[#A97C2F]">
+            <p className="mb-6 text-[9.5px] font-semibold uppercase tracking-[0.24em] text-[#C8962B]">
               {heading}
             </p>
             <ul className="space-y-3.5">
@@ -107,11 +106,10 @@ const Footer = () => (
             © {new Date().getFullYear()} Cloudio Ministries. All rights reserved.
           </p>
 
-          {/* Socials */}
           <div className="flex items-center gap-1">
             {socials.map((s) => (
               <a key={s.label} href={s.href} aria-label={s.label}
-                 className="flex h-8 w-8 items-center justify-center text-white/30 transition-colors hover:text-[#A97C2F]">
+                 className="flex h-8 w-8 items-center justify-center text-white/30 transition-colors hover:text-[#C8962B]">
                 {s.icon}
               </a>
             ))}

@@ -31,13 +31,13 @@ const Education = () => (
         {/* Section Header */}
         <div className="mb-20 grid grid-cols-1 gap-8 lg:grid-cols-2 lg:items-end">
         <div>
-            <p className="mb-4 text-[10px] font-semibold uppercase tracking-[0.26em] text-[#A97C2F]">
+            <p className="mb-4 text-[10px] font-semibold uppercase tracking-[0.26em] text-[#C8962B]">
             Academic Background
             </p>
             <h2 className="font-['DM_Serif_Display'] leading-[1.08] text-[#1A1209]"
                 style={{ fontSize: "clamp(32px, 4vw, 48px)" }}>
             Rooted in the Word.<br />
-            <em style={{ color: "#A97C2F" }}>Grounded in Truth.</em>
+            <em style={{ color: "#C8962B" }}>Grounded in Truth.</em>
             </h2>
         </div>
         <div className="lg:pb-2 lg:pl-12">
@@ -80,14 +80,14 @@ const Education = () => (
             <div key={i} className="py-8 first:pt-0">
               <div className="mb-3 flex items-start justify-between gap-4">
                 <div>
-                  <p className="text-[9.5px] font-semibold uppercase tracking-[0.22em] text-[#A97C2F] mb-1.5">
+                  <p className="text-[9.5px] font-semibold uppercase tracking-[0.22em] text-[#C8962B] mb-1.5">
                     {d.field}
                   </p>
                   <h3 className="font-['DM_Serif_Display'] text-[20px] leading-snug text-[#1A1209]">
                     {d.level}
                   </h3>
                 </div>
-                <span className="shrink-0 mt-1 text-[11px] font-semibold text-[#A97C2F]/50 border border-[#A97C2F]/20 px-2.5 py-1">
+                <span className="shrink-0 mt-1 text-[11px] font-semibold text-[#C8962B]/50 border border-[#C8962B]/20 px-2.5 py-1">
                   {d.year}
                 </span>
               </div>
