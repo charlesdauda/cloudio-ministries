@@ -245,7 +245,7 @@ const Contact = () => (
               Connect With<br />
               <em style={{ color: "#A97C2F" }}>The Ministry.</em>
             </h1>
-            <p className="text-sm leading-[2] text-[#1A1209]/50 max-w-sm">
+            <p className="text-sm leading-loose text-[#1A1209]/50 max-w-sm">
               Dr Cloudio's apostolic ministry spans continents. Whether you are reaching
               out from Africa, Europe, the Americas, or beyond — every inquiry is
               received with the same care and urgency.
