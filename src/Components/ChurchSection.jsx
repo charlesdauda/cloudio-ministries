@@ -3,14 +3,14 @@ import { MapPin, Clock, Calendar } from "lucide-react";
 const services = [
   {
     day:   "Sunday",
-    name:  "Sunday Worship Service",
+    name:  "Word Alive Service",
     time:  "7:30 AM – 10:00 AM",
     icon:  <Calendar size={15} strokeWidth={1.5} />,
     desc:  "Begin your week in the presence of God. Expect powerful worship, revelatory teaching, and a move of the Holy Spirit.",
   },
   {
     day:   "Friday",
-    name:  "Friday Night Power Service",
+    name:  "Friday Tarry Hour Service",
     time:  "6:00 PM – 8:00 PM",
     icon:  <Clock size={15} strokeWidth={1.5} />,
     desc:  "End your week in fire. Friday nights are marked by prophetic ministry, intercession, and supernatural encounters.",
@@ -24,7 +24,7 @@ const ChurchSection = () => (
       {/* Header */}
       <div className="mb-10">
         <p className="mb-3 text-[10px] font-semibold uppercase tracking-[0.26em] text-[#C8962B]">
-          The Local Church
+          The Main Auditorium
         </p>
         <div className="flex flex-col gap-4 lg:flex-row lg:items-end lg:justify-between">
           <h2 className="font-['DM_Serif_Display'] leading-[1.08] text-[#1A1209]"
@@ -33,7 +33,7 @@ const ChurchSection = () => (
             <em style={{ color: "#C8962B" }}>Join the House.</em>
           </h2>
           <p className="max-w-sm text-[13px] leading-[1.8] text-[#1A1209]/50 lg:text-right">
-            Mystery Embassy International — Weija Taptoe, Accra.
+            Mystery Embassy International Weija Tatop, Accra.
             A house of prayer, teaching, and encounter.
           </p>
         </div>
