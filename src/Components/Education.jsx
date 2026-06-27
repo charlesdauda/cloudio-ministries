@@ -1,4 +1,4 @@
-import graduationImage from "../assets/Images/apshero1.png";
+import graduationImage from "../assets/Images/apsedu.png";
 
 const degrees = [
   {
@@ -9,11 +9,11 @@ const degrees = [
     description: "Doctoral research focused on apostolic governance, Kingdom theology, and the role of prophetic ministry in transforming nations and establishing God's purposes in the earth.",
   },
   {
-    level:       "Master of Divinity (MDiv)",
+    level:       "Doctor Of Theology (PhD)",
     field:       "Biblical Studies & Missiology",
     institution: "Institution Name",
     year:        "2012",
-    description: "Graduate study in biblical exposition, systematic theology, and cross-cultural missions — equipping Dr Cloudio with a strong doctrinal foundation for global ministry.",
+    description: "Graduate study in biblical exposition, systematic theology, and cross-cultural missions equipping Dr Cloudio with a strong doctrinal foundation for global ministry.",
   },
   {
     level:       "Bachelor of Theology (BTh)",
@@ -43,7 +43,7 @@ const Education = () => (
         <div className="lg:pb-2 lg:pl-12">
             <p className="max-w-md text-[14px] leading-[1.9] text-[#1A1209]/55">
             Dr Cloudio's academic journey reflects a deep commitment to understanding
-            the Word of God with both intellectual rigour and spiritual depth — equipping
+            the Word of God with both intellectual rigour and spiritual depth equipping
             him to teach, lead, and transform with authority and clarity.
             </p>
         </div>

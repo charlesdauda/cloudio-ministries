@@ -1,5 +1,5 @@
 import { Headphones, Radio, BookOpen } from "lucide-react";
-import pastorImg from "../assets/Images/apshero1.png";
+import pastorImg from "../assets/Images/apsspotify.png";
 
 const SpotifyIcon = ({ className = "h-5 w-5", color = "#1DB954" }) => (
   <svg viewBox="0 0 24 24" className={className} fill={color}>

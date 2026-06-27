@@ -99,7 +99,7 @@ const Sermons = () => (
         </div>
         <div className="lg:pl-12">
           <p className="max-w-md text-sm leading-[1.9] text-[#1A1209]/55">
-            Dr Cloudio's messages carry a rare depth — rooted in Scripture, revealed by the Spirit,
+            Dr Cloudio's messages carry a rare depth rooted in Scripture, revealed by the Spirit,
             and delivered with apostolic authority. Access his teachings across all platforms and
             allow the Word to transform your life.
           </p>
@@ -158,7 +158,7 @@ const Sermons = () => (
 
           {/* ── Replace with your own description ── */}
           <p className="text-sm leading-[1.9] text-[#1A1209]/55">
-            Join Dr Cloudio live for <em>Word Unmuted</em> — an unfiltered conversation
+            Join Dr Cloudio live for <em>Word Unmuted</em> an unfiltered conversation
             about faith, purpose, and the Kingdom of God. No scripts, no rehearsals;
             just the Spirit speaking through a yielded vessel in real time.
           </p>
@@ -219,7 +219,7 @@ const Sermons = () => (
               {/* ── Replace with your own text ── */}
               <p className="max-w-md text-sm leading-[1.9] text-[#1A1209]/55">
                 A rich archive of audio teachings, prophetic words, and daily devotionals
-                from Dr Cloudio — available anytime, anywhere.
+                from Dr Cloudio available anytime, anywhere.
               </p>
             </div>
           </div>

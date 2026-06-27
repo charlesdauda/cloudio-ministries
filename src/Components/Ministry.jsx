@@ -1,12 +1,12 @@
 import { useState, useEffect, useRef, useCallback } from "react";
 import { ArrowRight, BookOpen, Users, Flame, Globe, Zap, Heart } from "lucide-react";
-import pastorBanner from "../assets/Images/apshero1.png";
-import img1 from "../assets/Images/apshero1.png";
-import img2 from "../assets/Images/apshero2.png";
-import img3 from "../assets/Images/apshero3.png";
-import img4 from "../assets/Images/apsabout.png";
-import img5 from "../assets/Images/apshero2.png";
-import img6 from "../assets/Images/apshero3.png";
+import pastorBanner from "../assets/Images/apsc.png";
+import img1 from "../assets/Images/apsmandate.png";
+import img2 from "../assets/Images/apsprophetic.png";
+import img3 from "../assets/Images/apsahealing.png";
+import img4 from "../assets/Images/apsmystical.png";
+import img5 from "../assets/Images/apscounseling.png";
+import img6 from "../assets/Images/apsbiblical.png";
 
 const pillars = [
   { num:"01", img:img1, icon:<BookOpen size={22} strokeWidth={1.5}/>, title:"Apostolic Mandate",       body:"Grounded in the foundation of the apostles and prophets, Dr Cloudio carries a divine assignment to plant, establish, and govern God's purposes on the earth." },
