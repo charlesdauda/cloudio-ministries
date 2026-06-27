@@ -7,8 +7,8 @@ const navLinks = [
   { name: "Home",     href: "/",        type: "route" },
   { name: "About",    href: "/about",   type: "route" },
   { name: "Ministry", href: "/ministry",type: "route" },
-  { name: "Sermons", href: "/sermon", type: "route" },
-  { name: "Contact",  href: "/contact", type: "route"  },
+  { name: "Sermons",  href: "/sermon",  type: "route" },
+  { name: "Contact",  href: "/contact", type: "route" },
 ];
 
 const Navbar = () => {
@@ -45,6 +45,7 @@ const Navbar = () => {
           </span>
         </Link>
 
+        {/* Desktop nav */}
         <ul className="absolute left-1/2 hidden -translate-x-1/2 items-center gap-8 lg:flex">
           {navLinks.map((link) => (
             <li key={link.name}>
@@ -52,8 +53,10 @@ const Navbar = () => {
                 <Link
                   to={link.href}
                   onClick={() => setMobileOpen(false)}
-                  className={`relative pb-1 text-[12px] font-medium uppercase tracking-[0.12em] transition-colors duration-200 ${
-                    isActive(link) ? "text-[#1A1209]" : "text-[#1A1209]/65 hover:text-[#1A1209]"
+                  className={`relative pb-1 text-[12px] font-semibold uppercase tracking-[0.12em] transition-colors duration-200 ${
+                    isActive(link)
+                      ? "text-[#1A1209]"
+                      : "text-[#1A1209]/85 hover:text-[#1A1209]"
                   }`}
                   style={{ fontFamily: "Inter, sans-serif" }}
                 >
@@ -65,7 +68,7 @@ const Navbar = () => {
               ) : (
                 <a
                   href={link.href}
-                  className="relative pb-1 text-[12px] font-medium uppercase tracking-[0.12em] text-[#1A1209]/65 hover:text-[#1A1209] transition-colors duration-200"
+                  className="relative pb-1 text-[12px] font-semibold uppercase tracking-[0.12em] text-[#1A1209]/85 hover:text-[#1A1209] transition-colors duration-200"
                   style={{ fontFamily: "Inter, sans-serif" }}
                 >
                   {link.name}
@@ -80,6 +83,7 @@ const Navbar = () => {
         </button>
       </div>
 
+      {/* Mobile menu */}
       {mobileOpen && (
         <div className="border-t border-[#E8E3DA] bg-white px-6 pb-6 pt-4 lg:hidden">
           <ul className="flex flex-col gap-1">
@@ -89,8 +93,8 @@ const Navbar = () => {
                   <Link
                     to={link.href}
                     onClick={() => setMobileOpen(false)}
-                    className={`block px-2 py-2.5 text-[13px] font-medium uppercase tracking-[0.12em] ${
-                      isActive(link) ? "text-[#A97C2F]" : "text-[#1A1209]/70"
+                    className={`block px-2 py-2.5 text-[13px] font-semibold uppercase tracking-[0.12em] ${
+                      isActive(link) ? "text-[#A97C2F]" : "text-[#1A1209]/85"
                     }`}
                     style={{ fontFamily: "Inter, sans-serif" }}
                   >
@@ -100,7 +104,7 @@ const Navbar = () => {
                   <a
                     href={link.href}
                     onClick={() => setMobileOpen(false)}
-                    className="block px-2 py-2.5 text-[13px] font-medium uppercase tracking-[0.12em] text-[#1A1209]/70"
+                    className="block px-2 py-2.5 text-[13px] font-semibold uppercase tracking-[0.12em] text-[#1A1209]/85"
                     style={{ fontFamily: "Inter, sans-serif" }}
                   >
                     {link.name}
