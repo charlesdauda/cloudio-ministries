@@ -3,7 +3,6 @@ import pastorImage from "../assets/Images/apsabout.png";
 const checkItems = [
   "21 Years in Full-Time Ministry",
   "Author, Teacher & Mentor",
-  " Human founder of Mystery Embassy International",
   "Ministered in 10+ Countries",
   "Apostolic & Prophetic Mandate",
 ];
@@ -43,7 +42,7 @@ const About = () => (
               Doctorate degree in Apologetics. He is the human founder and General Overseer 
               of the Mystery Embassy International.
               His mission on earth is to restore destinies as he carries the grace 
-              and Mantle of Moses. He is an Apostolic Priest and well vested with the 
+              and the gift to exegete the Word. He is an Apostolic Priest and well vested with the 
               Power of the Holy Spirit, with the ability to flow in all dimensions 
               of the five-fold ministries.
           </p>
