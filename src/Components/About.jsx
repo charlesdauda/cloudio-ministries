@@ -3,8 +3,7 @@ import pastorImage from "../assets/Images/apsabout.png";
 const checkItems = [
   "21 Years in Full-Time Ministry",
   "Author, Teacher & Mentor",
-  "Founder of Mystery Embassy International",
-  "Married to Yeshuah & Blessed with the Mantle of Moses",
+  " Human founder of Mystery Embassy International",
   "Ministered in 10+ Countries",
   "Apostolic & Prophetic Mandate",
 ];
@@ -59,7 +58,7 @@ const About = () => (
             ))}
           </div>
         </div>
-        
+
         <div className="relative order-1 lg:order-2">
           <div className="absolute -bottom-4 -right-4 h-full w-full border border-[#C8962B]/20" />
           <div className="relative z-10 overflow-hidden">
