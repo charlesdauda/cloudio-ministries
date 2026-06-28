@@ -2,24 +2,15 @@ import graduationImage from "../assets/Images/apsedu.png";
 
 const degrees = [
   {
-    level:       "Doctor of Philosophy (PhD)",
-    field:       "Theology & Ministry Leadership",
-    institution: "Institution Name",
-    year:        "2018",
-    description: "Doctoral research focused on apostolic governance, Kingdom theology, and the role of prophetic ministry in transforming nations and establishing God's purposes in the earth.",
+    level:       "Doctor of Apologetics (PhD)",
+    description: "Doctoral studies examining the rational defense of Christian faith, the historical reliability of Scripture, and the intellectual foundations of Kingdom truth in a post-modern world.",
   },
   {
     level:       "Doctor Of Theology (PhD)",
-    field:       "Biblical Studies & Missiology",
-    institution: "Institution Name",
-    year:        "2012",
     description: "Graduate study in biblical exposition, systematic theology, and cross-cultural missions equipping Dr Cloudio with a strong doctrinal foundation for global ministry.",
   },
   {
     level:       "Bachelor of Theology (BTh)",
-    field:       "Pastoral Ministry",
-    institution: "Institution Name",
-    year:        "2008",
     description: "Foundational training in pastoral care, homiletics, and church leadership that laid the groundwork for a life of full-time ministry and apostolic service.",
   },
 ];

@@ -85,15 +85,12 @@ const Hero = () => {
   return (
     <section
       id="home"
-      className="relative mt-16 overflow-hidden lg:mt-18"
+      className="relative mt-16 overflow-hidden lg:mt-18 flex flex-col"
       style={{ minHeight: "calc(100svh - 4rem)" }}
     >
       <style>{heroStyles}</style>
-
-      {/* ── Mobile: plain white background (hidden on sm+) ── */}
       <div className="absolute inset-0 z-0 bg-white sm:hidden" />
 
-      {/* ── BG images: tablet & desktop only ── */}
       <div className="absolute inset-0 z-0 hidden sm:block">
         {exiting && prevIndex !== null && (
           <div key={`exit-${prevIndex}`} className="absolute inset-0">
@@ -111,7 +108,6 @@ const Hero = () => {
         </div>
       </div>
 
-      {/* ── Dark overlays: tablet & desktop only (unchanged) ── */}
       <div
         className="absolute inset-0 z-10 hidden sm:block"
         style={{
@@ -127,8 +123,7 @@ const Hero = () => {
         }}
       />
 
-      {/* ── Content ── */}
-      <div className="absolute inset-0 z-30 flex flex-col items-center justify-center px-5 pb-10 pt-10 text-center sm:mx-auto sm:max-w-7xl sm:items-start sm:justify-start sm:px-8 sm:pt-20 sm:text-left lg:px-12 lg:pt-24">
+      <div className="relative z-30 flex flex-1 flex-col justify-center items-center text-center px-5 pb-10 pt-10 sm:items-start sm:justify-start sm:text-left sm:px-8 sm:pt-20 lg:px-12 lg:pt-24 mx-auto w-full max-w-7xl">
         <div key={activeIndex} className="w-full max-w-[88%] hfade sm:max-w-md lg:max-w-xl">
 
           {/* Eyebrow */}
@@ -142,7 +137,6 @@ const Hero = () => {
             </p>
           </div>
 
-          {/* Headline — dark on mobile, white on sm+ */}
           <h1
             className="font-['DM_Serif_Display'] leading-[1.1] text-[#0A0A0A] sm:text-white"
             style={{ fontSize: "clamp(36px, 5.5vw, 60px)" }}
@@ -154,7 +148,6 @@ const Hero = () => {
             </span>
           </h1>
 
-          {/* Paragraph — muted dark on mobile, white/70 on sm+ */}
           <p
             className="mx-auto mt-5 max-w-sm text-[13.5px] leading-[1.85] text-[#5C5C5C] sm:mx-0 sm:text-white/70 lg:max-w-sm"
             style={{ fontFamily: "Inter,sans-serif" }}
@@ -163,23 +156,29 @@ const Hero = () => {
           </p>
         </div>
 
-        {/* Buttons — outline button adapts on mobile */}
         <div
           className="mt-8 flex flex-row items-center justify-center gap-3 sm:justify-start"
           style={{ fontFamily: "Inter,sans-serif" }}
         >
-          <button
-            className="flex items-center gap-2 px-6 py-3 text-[11px] font-semibold uppercase tracking-[0.14em] text-white transition-all hover:opacity-90"
-            style={{ background: "#A97C2F" }}
-          >
-            <Play size={13} fill="currentColor" /> Watch Messages
-          </button>
-          <button className="flex items-center gap-2 border border-[#0A0A0A]/25 bg-transparent px-6 py-3 text-[11px] font-semibold uppercase tracking-[0.14em] text-[#0A0A0A] transition-all hover:bg-[#0A0A0A]/5 sm:border-white/40 sm:bg-white/10 sm:text-white sm:backdrop-blur-sm sm:hover:bg-white/20">
-            <UserPlus size={13} /> Invite Pastor
-          </button>
+            <a
+              href="https://web.facebook.com/share/v/1PkZiJNNh4/"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="flex items-center gap-2 px-6 py-3 text-[11px] font-semibold uppercase tracking-[0.14em] text-white transition-all hover:opacity-90"
+              style={{ background: "#C8962B" }}
+            >
+              <Play size={13} fill="currentColor" /> Watch Messages
+            </a>
+            <a
+              href="https://wa.me/233244496968"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="flex items-center gap-2 border border-[#0A0A0A]/25 bg-transparent px-6 py-3 text-[11px] font-semibold uppercase tracking-[0.14em] text-[#0A0A0A] transition-all hover:bg-[#0A0A0A]/5 sm:border-white/40 sm:bg-white/10 sm:text-white sm:backdrop-blur-sm sm:hover:bg-white/20"
+            >
+              <UserPlus size={13} /> Invite Pastor
+            </a>
         </div>
 
-        {/* Stats — desktop/tablet only, unchanged */}
         <div className="mt-10 hidden flex-wrap items-center gap-x-7 gap-y-5 border-t border-white/20 pt-7 sm:flex lg:mt-14">
           <Stat icon={<Globe size={20} strokeWidth={1.4} />} value="10+" label="Countries Reached" />
           <Divider />
@@ -197,19 +196,6 @@ const Hero = () => {
             </div>
           </div>
         </div>
-      </div>
-
-      {/* Scripture — sm+ only, unchanged */}
-      <div className="absolute bottom-8 right-6 z-30 hidden max-w-65 text-right sm:block lg:right-12">
-        <p className="font-['DM_Serif_Display'] text-[13px] italic leading-relaxed text-white/75 drop-shadow lg:text-[15px]">
-          "Because it has been given unto you to know the mysteries of the kingdom of heaven."
-        </p>
-        <p
-          className="mt-2 text-[10px] font-semibold uppercase tracking-[0.18em] text-[#C8962B]"
-          style={{ fontFamily: "Inter,sans-serif" }}
-        >
-          — Matthew 13:11
-        </p>
       </div>
     </section>
   );

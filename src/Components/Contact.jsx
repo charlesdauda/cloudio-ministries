@@ -1,82 +1,30 @@
 import { useRef, useState, useEffect, useCallback } from "react";
-import {
-  FaEnvelope,
-  FaPhone,
-  FaYoutube,
-  FaFacebook,
-  FaTiktok,
-  FaInstagram,
-  FaXTwitter,
-  FaGlobe,
-} from "react-icons/fa6";
-
-const directContacts = [
-  {
-    icon:  <FaEnvelope size={18} />,
-    label: "General Enquiries",
-    value: "info@drcloudio.com",
-    href:  "mailto:info@drcloudio.com",
-  },
-  {
-    icon:  <FaEnvelope size={18} />,
-    label: "Ministry & Invitations",
-    value: "ministry@drcloudio.com",
-    href:  "mailto:ministry@drcloudio.com",
-  },
-  {
-    icon:  <FaPhone size={18} />,
-    label: "International Office",
-    value: "+1 000 000 0000",
-    href:  "tel:+10000000000",
-  },
-];
+import { FaFacebook, FaTiktok, FaInstagram, FaGlobe, } from "react-icons/fa6";
 
 const socials = [
-  {
-    icon:    <FaYoutube size={22} />,
-    label:   "YouTube",
-    handle:  "@DrCloudio",
-    desc:    "Sermons & teachings",
-    href:    "https://youtube.com/@DrCloudio",
-    color:   "#FF0000",
-  },
   {
     icon:    <FaFacebook size={22} />,
     label:   "Facebook",
     handle:  "Dr Cloudio",
-    desc:    "Live broadcasts & updates",
-    href:    "https://facebook.com/DrCloudio",
+    href:    "https://www.facebook.com/share/1Lnhxva2Pv/?mibextid=wwXIfr",
     color:   "#1877F2",
   },
   {
     icon:    <FaTiktok size={22} />,
     label:   "TikTok",
     handle:  "@drcloudio",
-    desc:    "Short-form word",
-    href:    "https://tiktok.com/@drcloudio",
+    href:    "https://www.tiktok.com/@dr.cloudio",
     color:   "#010101",
   },
   {
     icon:    <FaInstagram size={22} />,
     label:   "Instagram",
     handle:  "@drcloudio",
-    desc:    "Behind the ministry",
-    href:    "https://instagram.com/drcloudio",
+    href:    "https://www.instagram.com/pscloudio",
     color:   "#E1306C",
-  },
-  {
-    icon:    <FaXTwitter size={22} />,
-    label:   "X (Twitter)",
-    handle:  "@DrCloudio",
-    desc:    "Prophetic declarations",
-    href:    "https://x.com/DrCloudio",
-    color:   "#000000",
   },
 ];
 
-/* ─────────────────────────────────────────────
-   MOBILE SWIPE CAROUSEL
-───────────────────────────────────────────── */
 function MobileCarousel({ children, autoInterval = 4000 }) {
   const [active, setActive] = useState(0);
   const count = children.length;
@@ -121,7 +69,6 @@ function MobileCarousel({ children, autoInterval = 4000 }) {
         ))}
       </div>
 
-      {/* Dot indicators */}
       <div className="mt-5 flex justify-center gap-2">
         {children.map((_, i) => (
           <button
@@ -145,9 +92,6 @@ function MobileCarousel({ children, autoInterval = 4000 }) {
   );
 }
 
-/* ─────────────────────────────────────────────
-   SECTION HEADING
-───────────────────────────────────────────── */
 const SectionHeading = ({ eyebrow, title }) => (
   <div className="mb-10">
     <p className="text-[10px] font-semibold uppercase tracking-[0.26em] text-[#C8962B] mb-2">
@@ -165,9 +109,6 @@ const SectionHeading = ({ eyebrow, title }) => (
   </div>
 );
 
-/* ─────────────────────────────────────────────
-   CARD COMPONENTS
-───────────────────────────────────────────── */
 function ContactCard({ c }) {
   return (
     <a
@@ -220,13 +161,8 @@ function SocialCard({ s }) {
   );
 }
 
-/* ─────────────────────────────────────────────
-   MAIN COMPONENT
-───────────────────────────────────────────── */
 const Contact = () => (
   <div className="bg-white">
-
-    {/* ══ HERO ══ */}
     <div className="relative border-b border-[#E8E3DA]">
       <div className="mx-auto max-w-7xl px-5 pt-24 pb-20 sm:px-8 lg:px-12">
         <div className="flex items-center gap-3 mb-8">
@@ -243,11 +179,11 @@ const Contact = () => (
               style={{ fontSize: "clamp(36px, 5vw, 62px)" }}
             >
               Connect With<br />
-              <em style={{ color: "#C8962B" }}>The Ministry.</em>
+              <em style={{ color: "#C8962B" }}>Dr Cloudio.</em>
             </h1>
             <p className="text-sm leading-loose text-[#1A1209]/50 max-w-sm">
               Dr Cloudio's apostolic ministry spans continents. Whether you are reaching
-              out from Africa, Europe, the Americas, or beyond — every inquiry is
+              out from Africa, Europe, the Americas, or beyond every inquiry is
               received with the same care and urgency.
             </p>
           </div>
@@ -275,42 +211,19 @@ const Contact = () => (
       </div>
     </div>
 
-    {/* ══ DIRECT CONTACT ══ */}
-    <div className="mx-auto max-w-7xl px-5 py-16 sm:px-8 lg:px-12">
-      <SectionHeading eyebrow="Direct Contact" title="Reach Us Directly" />
-
-      {/* Desktop */}
-      <div className="hidden sm:grid grid-cols-1 gap-4 sm:grid-cols-3">
-        {directContacts.map((c) => (
-          <ContactCard key={c.label} c={c} />
-        ))}
-      </div>
-
-      {/* Mobile carousel */}
-      <div className="sm:hidden">
-        <MobileCarousel>
-          {directContacts.map((c) => <ContactCard key={c.label} c={c} />)}
-        </MobileCarousel>
-      </div>
-    </div>
-
-    {/* ══ DIVIDER ══ */}
     <div className="mx-auto max-w-7xl px-5 sm:px-8 lg:px-12">
       <div className="h-px bg-[#E8E3DA]" />
     </div>
 
-    {/* ══ SOCIAL PLATFORMS ══ */}
     <div className="mx-auto max-w-7xl px-5 py-16 sm:px-8 lg:px-12">
       <SectionHeading eyebrow="Social Media" title="Follow the Ministry" />
 
-      {/* Desktop */}
       <div className="hidden sm:grid grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-3">
         {socials.map((s) => (
           <SocialCard key={s.label} s={s} />
         ))}
       </div>
 
-      {/* Mobile carousel */}
       <div className="sm:hidden">
         <MobileCarousel autoInterval={3500}>
           {socials.map((s) => <SocialCard key={s.label} s={s} />)}

@@ -15,8 +15,8 @@ const youtubeSermons = [
 ];
 
 const podcastPlatforms = [
-  { icon: <FaFacebook size={16} />, label: "Facebook Live", color: "#1877F2", url: "https://web.facebook.com/YOUR_PAGE" },
-  { icon: <FaTiktok   size={16} />, label: "TikTok Live",   color: "#000000", url: "https://www.tiktok.com/@YOUR_HANDLE" },
+  { icon: <FaFacebook size={16} />, label: "Facebook Live", color: "#1877F2", url: "https://web.facebook.com/mysteryembassy/" },
+  { icon: <FaTiktok   size={16} />, label: "TikTok Live",   color: "#000000", url: "https://www.tiktok.com/@dr.cloudio" },
 ];
 
 const Carousel = ({ items, renderCard, autoPlay = true, interval = 4000 }) => {
@@ -158,14 +158,12 @@ const Sermons = () => (
             <p className="text-[10px] font-semibold uppercase tracking-[0.22em] text-[#C8962B] mb-2">
               Live Schedule
             </p>
-            {/* ── Replace with actual day, time & timezone ── */}
             <p className="text-sm text-[#1A1209]/70 leading-[1.8]">
               Facebook &amp; TikTok<br />
-              Every Wednesday · 7:00 PM – 8:30 PM (GMT+0)
+              Every Wednesday · 8:00 PM – 10:30 PM (GMT+0)
             </p>
           </div>
 
-          {/* Platform buttons */}
           <div className="flex flex-wrap gap-3">
             {podcastPlatforms.map((p) => (
               <a
@@ -182,13 +180,12 @@ const Sermons = () => (
           </div>
 
           <p className="text-xs text-[#1A1209]/40">
-            Tune in live — or catch the replay on YouTube
+            Tune in live or catch the replay on YouTube
           </p>
         </div>
       </div>
     </div>
 
-    {/* ── Telegram Banner ── */}
     <div className="bg-[#FDFCFA] py-14">
       <div className="mx-auto max-w-7xl px-5 sm:px-8 lg:px-12">
         <div className="border border-[#E8E3DA] p-8 lg:p-12 flex flex-col sm:flex-row sm:items-center sm:justify-between gap-8">
@@ -206,7 +203,6 @@ const Sermons = () => (
                 Hundreds of Messages<br />
                 <em style={{ color: "#C8962B" }}>Waiting for You.</em>
               </h3>
-              {/* ── Replace with your own text ── */}
               <p className="max-w-md text-sm leading-[1.9] text-[#1A1209]/55">
                 A rich archive of audio teachings, prophetic words, and daily devotionals
                 from Dr Cloudio available anytime, anywhere.
@@ -215,10 +211,10 @@ const Sermons = () => (
           </div>
 
           <a
-            href="https://t.me/YOUR_CHANNEL"
+          href="https://t.me/MysteryEmbassy"
             target="_blank"
             rel="noopener noreferrer"
-            className="shrink-0 inline-flex items-center gap-2 border border-[#229ED9] px-6 py-3 text-[11px] font-semibold uppercase tracking-[0.16em] text-[#229ED9] transition-all duration-200 hover:bg-[#229ED9] hover:text-white"
+            className="shrink-0 inline-flex items-center justify-center gap-2 border border-[#229ED9] px-6 py-3 text-[11px] font-semibold uppercase tracking-[0.16em] text-[#229ED9] transition-all duration-200 hover:bg-[#229ED9] hover:text-white w-full sm:w-auto"
           >
             <FaTelegram size={13} /> Join Channel
           </a>
@@ -229,8 +225,6 @@ const Sermons = () => (
 
   </div>
 );
-
-/* ── Card components ── */
 
 const SpotifyCard = ({ s }) => (
   <div className="flex flex-col gap-4 border border-[#E8E3DA] p-5 hover:shadow-[0_4px_20px_rgba(0,0,0,0.07)] transition-all duration-300">

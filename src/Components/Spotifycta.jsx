@@ -18,7 +18,7 @@ const SpotifyCTA = () => {
     <section className="relative overflow-hidden" style={{ background: "#0A0A0A" }}>
       <div className="absolute inset-0 z-0">
         <div
-          className="absolute inset-y-0 left-0 w-full lg:w-[52%]"
+          className="absolute inset-y-0 left-0 hidden lg:block lg:w-[52%]"
           style={{
             backgroundImage: `url(${pastorImg})`,
             backgroundSize: "cover",
@@ -32,17 +32,11 @@ const SpotifyCTA = () => {
             background: "linear-gradient(to right, rgba(10,10,10,0.1) 0%, rgba(10,10,10,0.55) 60%, rgba(10,10,10,1) 100%)",
           }}
         />
-
-        <div
-          className="absolute inset-0 lg:hidden"
-          style={{ background: "rgba(10,10,10,0.72)" }}
-        />
-
+        
         <div
           className="pointer-events-none absolute -bottom-20 -left-20 h-72 w-72 rounded-full opacity-[0.07]"
           style={{ background: "radial-gradient(circle, #C8962B 0%, transparent 65%)" }}
         />
-
         <div
           className="pointer-events-none absolute -bottom-10 right-0 h-56 w-56 rounded-full opacity-[0.05]"
           style={{ background: "radial-gradient(circle, #1DB954 0%, transparent 65%)" }}
@@ -54,7 +48,6 @@ const SpotifyCTA = () => {
 
           <div className="hidden lg:block" />
 
-          {/* Right col */}
           <div className="py-12 lg:py-16 lg:pl-10">
 
             <div className="mb-6 flex items-center gap-2.5">
@@ -97,7 +90,7 @@ const SpotifyCTA = () => {
             </p>
 
             <a
-              href="https://open.spotify.com"
+              href="https://open.spotify.com/show/0sAsHcZqb2L4hZaKIgNB6x?si=9dd78694e4ac4e05"
               target="_blank"
               rel="noopener noreferrer"
               className="mt-6 inline-flex items-center gap-2.5 rounded-none px-6 py-3 text-[11px] font-semibold uppercase tracking-[0.16em] text-white transition-all duration-200 hover:brightness-110 active:scale-95"

@@ -78,12 +78,12 @@ const ChurchSection = () => (
             </p>
             <div className="h-px w-8 bg-[#C8962B]/30 my-4" />
             <p className="text-[13px] text-[#1A1209]/45 leading-relaxed">
-              Weija Taptoe, Accra — Ghana
+              Weija Tatop, Accra — Ghana
             </p>
           </div>
           <div className="flex flex-col gap-2">
             <a
-              href="https://maps.google.com"
+              href="https://maps.app.goo.gl/zM2kBNHcbGgS2NoHA?g_st=ic"
               target="_blank"
               rel="noopener noreferrer"
               className="inline-flex items-center justify-center gap-2 border border-[#C8962B] px-5 py-2.5 text-[11px] font-semibold uppercase tracking-[0.14em] text-[#C8962B] transition-all hover:bg-[#C8962B] hover:text-white"
@@ -91,7 +91,7 @@ const ChurchSection = () => (
               <MapPin size={12} strokeWidth={1.5} /> Get Directions
             </a>
             <a
-              href="#contact"
+              href="https://wa.me/233244496968"
               className="inline-flex items-center justify-center gap-2 bg-[#1A1209] px-5 py-2.5 text-[11px] font-semibold uppercase tracking-[0.14em] text-white transition-all hover:opacity-80"
             >
               Plan Your Visit

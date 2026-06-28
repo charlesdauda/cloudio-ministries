@@ -49,7 +49,6 @@ const About = () => (
               of the five-fold ministries.
           </p>
 
-          {/* Checklist */}
           <div className="mb-10 grid grid-cols-1 gap-x-10 gap-y-4 sm:grid-cols-2"
                style={{ fontFamily:"Inter,sans-serif" }}>
             {checkItems.map((item) => (
@@ -60,8 +59,7 @@ const About = () => (
             ))}
           </div>
         </div>
-
-        {/* Image */}
+        
         <div className="relative order-1 lg:order-2">
           <div className="absolute -bottom-4 -right-4 h-full w-full border border-[#C8962B]/20" />
           <div className="relative z-10 overflow-hidden">

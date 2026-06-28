@@ -85,13 +85,11 @@ const Navbar = () => {
           ))}
         </ul>
 
-        {/* Mobile toggle */}
         <button onClick={() => setMobileOpen((v) => !v)} className="text-[#0A0A0A] lg:hidden">
           {mobileOpen ? <X size={22} /> : <Menu size={22} />}
         </button>
       </div>
 
-      {/* Mobile menu */}
       {mobileOpen && (
         <div className="border-t border-[#E5E5E5] bg-white px-6 pb-6 pt-4 lg:hidden">
           <ul className="flex flex-col gap-1">

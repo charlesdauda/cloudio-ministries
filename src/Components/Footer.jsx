@@ -1,15 +1,15 @@
-import { FaInstagram, FaFacebookF, FaYoutube, FaXTwitter } from "react-icons/fa6";
+import { FaInstagram, FaFacebookF, FaTiktok } from "react-icons/fa6";
 
 const footerLinks = {
   "Ministry": [
-    { label: "About Dr Cloudio",  href: "#about"       },
-    { label: "Ministry Pillars",  href: "#ministry"    },
-    { label: "Testimonials",      href: "#testimonials" },
-    { label: "Invite the Apostle",href: "#contact"     },
+    { label: "About Dr Cloudio",  href: "/about"       },
+    { label: "Ministry Pillars",  href: "/ministry"    },
+    { label: "Testimonies",      href: "#testimonies" },
+    { label: "Invite the Apostle",href: "/contact"     },
   ],
   "Resources": [
-    { label: "Watch Sermons",      href: "#sermons" },
-    { label: "Listen to Messages", href: "#sermons" },
+    { label: "Watch Sermons",      href: "/sermon" },
+    { label: "Listen to Messages", href: "/sermons" },
     { label: "Upcoming Events",    href: "#events"  },
     { label: "Books & Media",      href: "#media"   },
   ],
@@ -17,21 +17,18 @@ const footerLinks = {
     { label: "Partner With Us",  href: "#partner" },
     { label: "Prayer Requests",  href: "#prayer"  },
     { label: "Give / Tithe",     href: "#give"    },
-    { label: "Contact Us",       href: "#contact" },
+    { label: "Contact Us",       href: "/contact" },
   ],
 };
 
 const socials = [
-  { icon: <FaInstagram size={15} />, href: "#", label: "Instagram" },
-  { icon: <FaFacebookF size={14} />, href: "#", label: "Facebook"  },
-  { icon: <FaYoutube   size={15} />, href: "#", label: "YouTube"   },
-  { icon: <FaXTwitter  size={15} />, href: "#", label: "X/Twitter" },
+  { icon: <FaInstagram size={15} />, href: "https://www.instagram.com/pscloudio", label: "Instagram" },
+  { icon: <FaFacebookF size={14} />, href: "https://www.facebook.com/share/1Lnhxva2Pv/?mibextid=wwXIfr", label: "Facebook"  },
+  { icon: <FaTiktok  size={15} />, href: "https://www.tiktok.com/@dr.cloudio", label: "TikTok" },
 ];
 
 const Footer = () => (
   <footer className="bg-[#0A0A0A]" style={{ fontFamily: "Inter, sans-serif" }}>
-
-    {/* ── Newsletter Banner ── */}
     <div className="border-b border-white/8">
       <div className="mx-auto max-w-7xl px-5 py-12 sm:px-8 lg:px-12">
         <div className="flex flex-col gap-6 lg:flex-row lg:items-center lg:justify-between">
@@ -60,11 +57,8 @@ const Footer = () => (
       </div>
     </div>
 
-    {/* ── Main Footer Body ── */}
     <div className="mx-auto max-w-7xl px-5 py-16 sm:px-8 lg:px-12">
       <div className="grid grid-cols-1 gap-12 lg:grid-cols-[1.6fr_1fr_1fr_1fr]">
-
-        {/* Brand Column */}
         <div>
           <div className="mb-6">
             <p className="font-['DM_Serif_Display'] text-[22px] text-white leading-none">Cloudio</p>
@@ -76,7 +70,6 @@ const Footer = () => (
           </p>
         </div>
 
-        {/* Link Columns */}
         {Object.entries(footerLinks).map(([heading, links]) => (
           <div key={heading}>
             <p className="mb-6 text-[9.5px] font-semibold uppercase tracking-[0.24em] text-[#C8962B]">
@@ -98,7 +91,6 @@ const Footer = () => (
       </div>
     </div>
 
-    {/* ── Bottom Bar ── */}
     <div className="border-t border-white/8">
       <div className="mx-auto max-w-7xl px-5 py-6 sm:px-8 lg:px-12">
         <div className="flex flex-col items-center gap-4 sm:flex-row sm:justify-between">
