@@ -73,7 +73,7 @@ const Hero = () => {
         setActiveIndex((i) => (i + 1) % images.length);
         setExiting(false);
         setPrevIndex(null);
-      }, 1200); // duration of kb-exit animation
+      }, 1200);
 
       return () => clearTimeout(next);
     }, 7000);
@@ -90,9 +90,11 @@ const Hero = () => {
     >
       <style>{heroStyles}</style>
 
-      {/* BG images — layered crossfade with Ken Burns, no flash */}
-      <div className="absolute inset-0 z-0">
-        {/* Outgoing image plays kb-exit */}
+      {/* ── Mobile: plain white background (hidden on sm+) ── */}
+      <div className="absolute inset-0 z-0 bg-white sm:hidden" />
+
+      {/* ── BG images: tablet & desktop only ── */}
+      <div className="absolute inset-0 z-0 hidden sm:block">
         {exiting && prevIndex !== null && (
           <div key={`exit-${prevIndex}`} className="absolute inset-0">
             <div
@@ -101,8 +103,6 @@ const Hero = () => {
             />
           </div>
         )}
-
-        {/* Incoming / active image plays kb-enter */}
         <div key={`enter-${activeIndex}`} className="absolute inset-0">
           <div
             className="h-full w-full bg-cover bg-center kb-enter"
@@ -111,25 +111,23 @@ const Hero = () => {
         </div>
       </div>
 
-      {/* Unified dark overlay — replaces the white gradient on desktop */}
-      {/* Left-heavy gradient so left content stays readable, right side shows image */}
+      {/* ── Dark overlays: tablet & desktop only (unchanged) ── */}
       <div
-        className="absolute inset-0 z-10"
+        className="absolute inset-0 z-10 hidden sm:block"
         style={{
           background:
             "linear-gradient(to right, rgba(15,10,4,0.82) 0%, rgba(15,10,4,0.65) 38%, rgba(15,10,4,0.30) 62%, rgba(15,10,4,0.15) 100%)",
         }}
       />
-      {/* Bottom vignette for scripture readability */}
       <div
-        className="absolute inset-0 z-10 pointer-events-none"
+        className="absolute inset-0 z-10 pointer-events-none hidden sm:block"
         style={{
           background:
             "linear-gradient(to top, rgba(10,7,2,0.55) 0%, transparent 30%)",
         }}
       />
 
-      {/* Content */}
+      {/* ── Content ── */}
       <div className="absolute inset-0 z-30 flex flex-col items-center justify-center px-5 pb-10 pt-10 text-center sm:mx-auto sm:max-w-7xl sm:items-start sm:justify-start sm:px-8 sm:pt-20 sm:text-left lg:px-12 lg:pt-24">
         <div key={activeIndex} className="w-full max-w-[88%] hfade sm:max-w-md lg:max-w-xl">
 
@@ -144,9 +142,9 @@ const Hero = () => {
             </p>
           </div>
 
-          {/* Headline */}
+          {/* Headline — dark on mobile, white on sm+ */}
           <h1
-            className="font-['DM_Serif_Display'] leading-[1.1] text-white"
+            className="font-['DM_Serif_Display'] leading-[1.1] text-[#0A0A0A] sm:text-white"
             style={{ fontSize: "clamp(36px, 5.5vw, 60px)" }}
           >
             <span className="block">{current.line1}</span>
@@ -156,16 +154,16 @@ const Hero = () => {
             </span>
           </h1>
 
-          {/* Paragraph */}
+          {/* Paragraph — muted dark on mobile, white/70 on sm+ */}
           <p
-            className="mx-auto mt-5 max-w-sm text-[13.5px] leading-[1.85] text-white/70 sm:mx-0 lg:max-w-sm"
+            className="mx-auto mt-5 max-w-sm text-[13.5px] leading-[1.85] text-[#5C5C5C] sm:mx-0 sm:text-white/70 lg:max-w-sm"
             style={{ fontFamily: "Inter,sans-serif" }}
           >
             {current.paragraph}
           </p>
         </div>
 
-        {/* Buttons */}
+        {/* Buttons — outline button adapts on mobile */}
         <div
           className="mt-8 flex flex-row items-center justify-center gap-3 sm:justify-start"
           style={{ fontFamily: "Inter,sans-serif" }}
@@ -176,12 +174,12 @@ const Hero = () => {
           >
             <Play size={13} fill="currentColor" /> Watch Messages
           </button>
-          <button className="flex items-center gap-2 border border-white/40 bg-white/10 px-6 py-3 text-[11px] font-semibold uppercase tracking-[0.14em] text-white backdrop-blur-sm transition-all hover:bg-white/20">
+          <button className="flex items-center gap-2 border border-[#0A0A0A]/25 bg-transparent px-6 py-3 text-[11px] font-semibold uppercase tracking-[0.14em] text-[#0A0A0A] transition-all hover:bg-[#0A0A0A]/5 sm:border-white/40 sm:bg-white/10 sm:text-white sm:backdrop-blur-sm sm:hover:bg-white/20">
             <UserPlus size={13} /> Invite Pastor
           </button>
         </div>
 
-        {/* Stats */}
+        {/* Stats — desktop/tablet only, unchanged */}
         <div className="mt-10 hidden flex-wrap items-center gap-x-7 gap-y-5 border-t border-white/20 pt-7 sm:flex lg:mt-14">
           <Stat icon={<Globe size={20} strokeWidth={1.4} />} value="10+" label="Countries Reached" />
           <Divider />
@@ -201,7 +199,7 @@ const Hero = () => {
         </div>
       </div>
 
-      {/* Scripture */}
+      {/* Scripture — sm+ only, unchanged */}
       <div className="absolute bottom-8 right-6 z-30 hidden max-w-65 text-right sm:block lg:right-12">
         <p className="font-['DM_Serif_Display'] text-[13px] italic leading-relaxed text-white/75 drop-shadow lg:text-[15px]">
           "Because it has been given unto you to know the mysteries of the kingdom of heaven."

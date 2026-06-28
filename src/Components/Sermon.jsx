@@ -19,7 +19,6 @@ const podcastPlatforms = [
   { icon: <FaTiktok   size={16} />, label: "TikTok Live",   color: "#000000", url: "https://www.tiktok.com/@YOUR_HANDLE" },
 ];
 
-/* ── Carousel ── */
 const Carousel = ({ items, renderCard, autoPlay = true, interval = 4000 }) => {
   const [current, setCurrent] = useState(0);
   const [paused,  setPaused]  = useState(false);
@@ -75,7 +74,6 @@ const Carousel = ({ items, renderCard, autoPlay = true, interval = 4000 }) => {
   );
 };
 
-/* ── Section heading: label + short gold rule, no icon, no full-width line ── */
 const SectionHeading = ({ label }) => (
   <div className="mb-10">
     <p className="text-[10px] font-semibold uppercase tracking-[0.26em] text-[#C8962B] mb-2">{label}</p>
@@ -108,8 +106,6 @@ const Sermons = () => (
     </div>
 
 
-
-    {/* ── Spotify ── */}
     <div className="mx-auto max-w-7xl px-5 py-14 sm:px-8 lg:px-12">
       <SectionHeading label="Now on Spotify" />
       <div className="hidden lg:grid grid-cols-3 gap-5">
@@ -120,7 +116,6 @@ const Sermons = () => (
       </div>
     </div>
 
-    {/* ── YouTube ── */}
     <div className="bg-[#FDFCFA] py-14">
       <div className="mx-auto max-w-7xl px-5 sm:px-8 lg:px-12">
         <SectionHeading label="Watch on YouTube" />
@@ -133,13 +128,11 @@ const Sermons = () => (
       </div>
     </div>
 
-    {/* ── Word Unmuted Podcast ── */}
     <div className="mx-auto max-w-7xl px-5 py-14 sm:px-8 lg:px-12">
       <SectionHeading label="Word Unmuted — Live Podcast" />
 
       <div className="grid grid-cols-1 gap-10 lg:grid-cols-2 lg:items-start">
 
-        {/* Natural-size portrait flyer — no forced crop, no forced ratio */}
         <div className="overflow-hidden border border-[#E8E3DA]">
           <img
             src={podcastFlyer}
@@ -148,7 +141,6 @@ const Sermons = () => (
           />
         </div>
 
-        {/* Info */}
         <div className="flex flex-col gap-6 lg:pt-2">
           <h3 className="font-['DM_Serif_Display'] text-[#1A1209] leading-snug"
               style={{ fontSize: "clamp(24px, 3vw, 36px)" }}>
@@ -156,14 +148,12 @@ const Sermons = () => (
             <em style={{ color: "#A97C2F" }}>Raw. Real. Revelatory.</em>
           </h3>
 
-          {/* ── Replace with your own description ── */}
           <p className="text-sm leading-[1.9] text-[#1A1209]/55">
             Join Dr Cloudio live for <em>Word Unmuted</em> an unfiltered conversation
             about faith, purpose, and the Kingdom of God. No scripts, no rehearsals;
             just the Spirit speaking through a yielded vessel in real time.
           </p>
 
-          {/* Schedule */}
           <div className="border-l-2 border-[#C8962B] pl-4">
             <p className="text-[10px] font-semibold uppercase tracking-[0.22em] text-[#C8962B] mb-2">
               Live Schedule
