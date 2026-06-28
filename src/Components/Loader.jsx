@@ -12,7 +12,7 @@ const Loader = ({ onDone }) => {
 
   return (
     <div
-      className="fixed inset-0 z-[9999] flex items-center justify-center bg-white"
+      className="fixed inset-0 z-9999 flex items-center justify-center bg-white"
       style={{
         opacity: phase === "fade" ? 0 : 1,
         transition: phase === "fade" ? "opacity 0.6s ease-in-out" : "none",

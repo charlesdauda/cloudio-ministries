@@ -85,8 +85,8 @@ const Hero = () => {
   return (
     <section
       id="home"
-      className="relative mt-16 overflow-hidden lg:mt-18 flex flex-col"
-      style={{ minHeight: "calc(100svh - 4rem)" }}
+      className="relative overflow-hidden flex flex-col"
+      style={{ height: "100svh", paddingTop: "4rem" }}
     >
       <style>{heroStyles}</style>
       <div className="absolute inset-0 z-0 bg-white sm:hidden" />
@@ -160,23 +160,23 @@ const Hero = () => {
           className="mt-8 flex flex-row items-center justify-center gap-3 sm:justify-start"
           style={{ fontFamily: "Inter,sans-serif" }}
         >
-            <a
-              href="https://web.facebook.com/share/v/1PkZiJNNh4/"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="flex items-center gap-2 px-6 py-3 text-[11px] font-semibold uppercase tracking-[0.14em] text-white transition-all hover:opacity-90"
-              style={{ background: "#C8962B" }}
-            >
-              <Play size={13} fill="currentColor" /> Watch Messages
-            </a>
-            <a
-              href="https://wa.me/233244496968"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="flex items-center gap-2 border border-[#0A0A0A]/25 bg-transparent px-6 py-3 text-[11px] font-semibold uppercase tracking-[0.14em] text-[#0A0A0A] transition-all hover:bg-[#0A0A0A]/5 sm:border-white/40 sm:bg-white/10 sm:text-white sm:backdrop-blur-sm sm:hover:bg-white/20"
-            >
-              <UserPlus size={13} /> Invite Pastor
-            </a>
+          <a
+            href="https://web.facebook.com/share/v/1PkZiJNNh4/"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="flex items-center gap-2 px-6 py-3 text-[11px] font-semibold uppercase tracking-[0.14em] text-white transition-all hover:opacity-90"
+            style={{ background: "#C8962B" }}
+          >
+            <Play size={13} fill="currentColor" /> Watch Messages
+          </a>
+          <a
+            href="https://wa.me/233244496968"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="flex items-center gap-2 border border-[#0A0A0A]/25 bg-transparent px-6 py-3 text-[11px] font-semibold uppercase tracking-[0.14em] text-[#0A0A0A] transition-all hover:bg-[#0A0A0A]/5 sm:border-white/40 sm:bg-white/10 sm:text-white sm:backdrop-blur-sm sm:hover:bg-white/20"
+          >
+            <UserPlus size={13} /> Invite Pastor
+          </a>
         </div>
 
         <div className="mt-10 hidden flex-wrap items-center gap-x-7 gap-y-5 border-t border-white/20 pt-7 sm:flex lg:mt-14">
