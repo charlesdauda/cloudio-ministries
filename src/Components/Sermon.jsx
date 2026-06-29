@@ -3,15 +3,15 @@ import { FaSpotify, FaTelegram, FaFacebook, FaYoutube, FaTiktok } from "react-ic
 import podcastFlyer from "../assets/Images/apsword.png";
 
 const spotifySermons = [
-  { id: "1FOfCwZ4w9zpKGwUabCNpQ", title: "Sermon Title One",   desc: "A powerful word on the apostolic mandate and the mysteries of the Kingdom." },
-  { id: "359ATPI5pCVtEPqrXoFpZo", title: "Sermon Title Two",   desc: "Prophetic insights that bring clarity to your calling and destiny in God." },
-  { id: "1CoHzgpNzZyQC4SVCHqmVi", title: "Sermon Title Three", desc: "Revelatory teaching on healing, wholeness, and the power of Yeshuah." },
+  { id: "1FOfCwZ4w9zpKGwUabCNpQ", title: "Dangers Of Lying to your Spiritual Father",   desc: "Unfolding the serious consequences of lying to your spiritual father."},
+  { id: "359ATPI5pCVtEPqrXoFpZo", title: "The Mystery Of Spiritual Covering",   desc: "This message uncovers deep mysteries about spiritual covering and its impact on your life." },
+  { id: "1CoHzgpNzZyQC4SVCHqmVi", title: "The Dangers of Masturbation", desc:"A message that highlights the negative and spiritual implications of sex and masturbation."},
 ];
 
 const youtubeSermons = [
-  { id: "Ty0OfddxCm0", title: "Kingdom Authority",  desc: "Understanding your authority as a believer in Yeshuah." },
-  { id: "tHV8ZQQorbs", title: "The Prophetic Word", desc: "How to receive and walk in the prophetic word over your life." },
-  { id: "kOf0cq8ikiU", title: "Fire of Revival",    desc: "A message that ignites passion and hunger for the presence of God." },
+  { id: "Ty0OfddxCm0", title: "Is Christ the same as Lucifer",  desc: "Exposing the bigger misconception that Christ is the same as Lucifer" },
+  { id: "tHV8ZQQorbs", title: "The Mystery Of Ideas", desc: "This sermon expresses the mystries of ideas" },
+  { id: "kOf0cq8ikiU", title: "The Voice behind the Voice",    desc: "How to dicern the kind of spirit backing every voice " },
 ];
 
 const podcastPlatforms = [
