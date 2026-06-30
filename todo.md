@@ -5,45 +5,45 @@
 - [x] Nations reached, Global Impact ststistics in a form of banner
 - [x] About Pastor as well as mandate
 - [x] Spotify Banner 
-- [] List of message section
-- [] News Letter
-- [] Footer
+- [x] List of message section
+- [x] News Letter
+- [x] Footer
 
 ## About Page
-- [] Biography with Images
-- [] Calling and Vision
-- [] Ministry Timeline
-- [] Awards and Recognition
-- [] Small gallery section
+- [x] Biography with Images
+- [x] Calling and Vision
+- [x] Ministry Timeline
+- [x] Awards and Recognition
+- [x] Small gallery section
 
 ## Ministry Page
-- [] About Ministry
-- [] Mision & Vision Statement
-- [] Core Values
-- [] Services & Events sections
-- [] Gallery
+- [x] About Ministry
+- [x] Mision & Vision Statement
+- [x] Core Values
+- [x] Services & Events sections
+- [x] Gallery
 
 ## Sermons 
-- [] Latest
-- [] Series
-- [] Mystical Mysteries
-- [] listen more on spotify (like a nice professional banner very clean)
+- [x] Latest
+- [x] Series
+- [x] Mystical Mysteries
+- [x] listen more on spotify (like a nice professional banner very clean)
 
 ## Events 
-- [] Covenant with the Prophet
-- [] Tarry Hour Service with description
-- [] Word Alive Service with description
-- [] Day Services with description 
+- [x] Covenant with the Prophet
+- [x] Tarry Hour Service with description
+- [x] Word Alive Service with description
+- [x] Day Services with description 
 
 ## Contact 
-- [] Form
-- [] office Address
-- [] Social Media handles
-- [] Maps
+- [x] Form
+- [x] office Address
+- [x] Social Media handles
+- [x] Maps
 
 ## Footer 
-- [] Ministry Overview
-- [] Quick Links
-- [] Resources
-- [] Contact
-- [] Socials links
+- [x] Ministry Overview
+- [x] Quick Links
+- [x] Resources
+- [x] Contact
+- [x] Socials links
